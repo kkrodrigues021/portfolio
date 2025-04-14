@@ -132,6 +132,31 @@ h2 {
     transition: background-color 0.3s;
 }
 
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-download i {
+    font-size: 1.2rem;
+}
+
 .btn:hover {
     background-color: #4682b4; /* Tom de azul mais escuro no hover */
 }
