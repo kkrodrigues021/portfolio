@@ -1,13 +1,12 @@
 <script>
   const contadorEl = document.getElementById("contador-visitas");
 
-  fetch('https://api.countapi.xyz/update/kaiky-portfolio/visits/?amount=1')
+  fetch('https://api.countapi.xyz/update/kaiky-portfolio-2025/visitas/?amount=1')
     .then(res => res.json())
     .then(data => {
       contadorEl.innerText = `Visitas: ${data.value}`;
     })
-    .catch(err => {
+    .catch(() => {
       contadorEl.innerText = 'Visitas: erro';
-      console.error(err);
     });
 </script>
