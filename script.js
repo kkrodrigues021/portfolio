@@ -1,7 +1,13 @@
-// Contador de visitas
-let visitas = localStorage.getItem('visitas') ? parseInt(localStorage.getItem('visitas')) : 0;
-visitas++;
-localStorage.setItem('visitas', visitas);
+<script>
+  const contadorEl = document.getElementById("contador-visitas");
 
-// Atualiza o contador na página
-document.getElementById('contador-visitas').innerText = `Visitas: ${visitas}`;
+  fetch('https://api.countapi.xyz/update/kaiky-portfolio/visits/?amount=1')
+    .then(res => res.json())
+    .then(data => {
+      contadorEl.innerText = `Visitas: ${data.value}`;
+    })
+    .catch(err => {
+      contadorEl.innerText = 'Visitas: erro';
+      console.error(err);
+    });
+</script>
