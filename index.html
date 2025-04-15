@@ -16,12 +16,7 @@
             <p>Estudante de ADS | Criador de Scripts e Sistemas Web</p>
             <a href="curriculo.pdf" download="Kaiky_Rodrigues_Curriculo.pdf" class="btn-download">
                 <i class="fas fa-download"></i> Baixar Currículo
-            </a>              
-            <p id="contador-visitas">Visitas: carregando...</p>
-    
-            <!-- Script de contagem do GoatCounter -->
-            <script data-goatcounter="https://kaiky-portfolio.goatcounter.com/"
-                    async src="//gc.zgo.at/count.js"></script>
+            </a>
         </div>
     </header>
 
@@ -63,7 +58,6 @@
                     <img src="imagens/git.png" alt="Logo Git" class="logo">
                     <p class="linguagem-nome">Git</p>
                 </div>
-                <!-- Adicione mais logos conforme necessário -->
             </div>
         </div>
     </section>
@@ -73,7 +67,7 @@
             <h2>Meus Projetos</h2>
             <div class="project">
                 <h3>Site de Portfólio</h3>
-                <p>Este site que você está vendo, feito com HTML e CSS.</p>
+                <p>Este site que você está vendo, feito com HTML, CSS e JavaScript.</p>
                 <a href="https://github.com/kkrodrigues021/portfolio.git" target="_blank" class="btn">Ver no GitHub</a>
             </div>
         </div>
@@ -97,5 +91,32 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        // Pega o número de visitas e coloca no contador do site
+        fetch('https://kaiky-portfolio.goatcounter.com/count')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('contador-visitas').innerText = `Visitas: ${data.value}`;
+            })
+            .catch(() => {
+                document.getElementById('contador-visitas').innerText = 'Visitas: erro';
+            });
+
+        // Anima as seções conforme a rolagem da página
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
