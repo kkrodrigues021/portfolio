@@ -33,7 +33,32 @@
     <section id="habilidades" class="section">
         <div class="container">
             <h2>Minhas Habilidades</h2>
-            <div class="habilidades-container">
+            <div class="habilidades-container horizontal-scroll" id="habilidades-scroll">
+                <div class="habilidade-item">
+                    <img src="imagens/python.png" alt="Logo Python" class="logo">
+                    <p class="linguagem-nome">Python</p>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/html.png" alt="Logo HTML" class="logo">
+                    <p class="linguagem-nome">HTML5</p>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/css.png" alt="Logo CSS" class="logo">
+                    <p class="linguagem-nome">CSS3</p>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/javascript.png" alt="Logo JavaScript" class="logo">
+                    <p class="linguagem-nome">JavaScript</p>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/lua.png" alt="Logo Lua" class="logo">
+                    <p class="linguagem-nome">Lua</p>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/git.png" alt="Logo Git" class="logo">
+                    <p class="linguagem-nome">Git</p>
+                </div>
+                <!-- Cópia das habilidades para rolagem contínua -->
                 <div class="habilidade-item">
                     <img src="imagens/python.png" alt="Logo Python" class="logo">
                     <p class="linguagem-nome">Python</p>
@@ -77,9 +102,21 @@
         <div class="container">
             <h2>Contato</h2>
             <ul>
-                <li><a href="https://github.com/kkrodrigues021" target="_blank" class="btn">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="btn">LinkedIn</a></li>
-                <li><a href="mailto:kaiky.rodrigues039@gmail.com" class="btn">Email</a></li>
+                <li>
+                    <a href="https://github.com/kkrodrigues021" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:kaiky.rodrigues039@gmail.com" class="btn">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </li>
             </ul>
         </div>
     </section>
@@ -93,16 +130,6 @@
     <script src="script.js"></script>
 
     <script>
-        // Pega o número de visitas e coloca no contador do site
-        fetch('https://kaiky-portfolio.goatcounter.com/count')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('contador-visitas').innerText = `Visitas: ${data.value}`;
-            })
-            .catch(() => {
-                document.getElementById('contador-visitas').innerText = 'Visitas: erro';
-            });
-
         // Anima as seções conforme a rolagem da página
         const sections = document.querySelectorAll('.section');
         const observer = new IntersectionObserver((entries, observer) => {
