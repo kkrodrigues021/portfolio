@@ -18,8 +18,26 @@
                 <i class="fas fa-download"></i> Baixar Currículo
             </a>              
             <p id="contador-visitas">Visitas: carregando...</p>
+    
+            <!-- Script de contagem do GoatCounter -->
+            <script data-goatcounter="https://kaiky-portfolio.goatcounter.com/count"
+                    async src="//gc.zgo.at/count.js"></script>
+    
+            <!-- Script para pegar e exibir as visitas no site -->
+            <script>
+            // Pega o número de visitas e coloca no contador do site
+            fetch('https://kaiky-portfolio.goatcounter.com/count')
+                .then(response => response.json())
+                .then(data => {
+                document.getElementById('contador-visitas').innerText = `Visitas: ${data.value}`;
+                })
+                .catch(() => {
+                document.getElementById('contador-visitas').innerText = 'Visitas: erro';
+                });
+            </script>
         </div>
     </header>
+    
 
     <section id="sobre" class="section">
         <div class="container">
@@ -69,7 +87,7 @@
             <h2>Meus Projetos</h2>
             <div class="project">
                 <h3>Site de Portfólio</h3>
-                <p>Este site que você está vendo, feito com HTML, CSS e JavaScript.</p>
+                <p>Este site que você está vendo, feito com HTML e CSS.</p>
                 <a href="https://github.com/kkrodrigues021/portfolio.git" target="_blank" class="btn">Ver no GitHub</a>
             </div>
         </div>
