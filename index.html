@@ -1,149 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaiky Rodrigues | Portfólio</title>
-    <link rel="icon" href="imagens/icon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaiky Rodrigues | Portfólio</title>
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Olá, me chamo Kaiky Rodrigues</h1>
-            <p>Estudante de ADS | Criador de Scripts e Sistemas Web</p>
-            <a href="curriculo.pdf" download="Kaiky_Rodrigues_Curriculo.pdf" class="btn-download">
-                <i class="fas fa-download"></i> Baixar Currículo
-            </a>
+  <!-- Fundo com partículas -->
+  <div id="tsparticles"></div>
+
+  <!-- Botão de modo escuro/claro -->
+  <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <div class="container">
+      <h1>Olá, me chamo Kaiky Rodrigues</h1>
+      <p>Estudante de ADS | Criador de Scripts e Sistemas Web</p>
+      <a href="curriculo.pdf" download="Kaiky_Rodrigues_Curriculo.pdf" class="btn-download">
+        <i class="fas fa-download"></i> Baixar Currículo
+      </a>
+    </div>
+  </header>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <div class="sobre-container">
+        <img src="imagens/foto.jpg" alt="Foto de Perfil" class="foto-perfil">
+        <p>Sou estudante de Análise e Desenvolvimento de Sistemas no 2º período e tenho uma paixão por criar scripts e modificações para jogos, além de desenvolver sistemas completos de sites. Estou sempre em busca de novos desafios para aplicar e expandir meus conhecimentos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="section">
+    <div class="container">
+      <h2>Minhas Habilidades</h2>
+      <div class="habilidades-grid">
+        <div class="habilidade-item">
+          <img src="imagens/python.png" alt="Logo Python" class="logo">
+          <p class="linguagem-nome">Python</p>
         </div>
-    </header>
-
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <div class="sobre-container">
-                <img src="imagens/foto.jpg" alt="Foto de Perfil" class="foto-perfil">
-                <p>Sou estudante de Análise e Desenvolvimento de Sistemas no 2º período e tenho uma paixão por criar scripts e modificações para jogos, além de desenvolver sistemas completos de sites. Estou sempre em busca de novos desafios para aplicar e expandir meus conhecimentos, tanto na área de programação quanto no desenvolvimento de soluções criativas e eficientes.</p>
-            </div>
+        <div class="habilidade-item">
+          <img src="imagens/html.png" alt="Logo HTML" class="logo">
+          <p class="linguagem-nome">HTML5</p>
         </div>
-    </section>
-
-    <section id="habilidades" class="section">
-        <div class="container">
-            <h2>Minhas Habilidades</h2>
-            <div class="habilidades-container horizontal-scroll" id="habilidades-scroll">
-                <div class="habilidade-item">
-                    <img src="imagens/python.png" alt="Logo Python" class="logo">
-                    <p class="linguagem-nome">Python</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/html.png" alt="Logo HTML" class="logo">
-                    <p class="linguagem-nome">HTML5</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/css.png" alt="Logo CSS" class="logo">
-                    <p class="linguagem-nome">CSS3</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/javascript.png" alt="Logo JavaScript" class="logo">
-                    <p class="linguagem-nome">JavaScript</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/lua.png" alt="Logo Lua" class="logo">
-                    <p class="linguagem-nome">Lua</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/git.png" alt="Logo Git" class="logo">
-                    <p class="linguagem-nome">Git</p>
-                </div>
-                <!-- Cópia das habilidades para rolagem contínua -->
-                <div class="habilidade-item">
-                    <img src="imagens/python.png" alt="Logo Python" class="logo">
-                    <p class="linguagem-nome">Python</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/html.png" alt="Logo HTML" class="logo">
-                    <p class="linguagem-nome">HTML5</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/css.png" alt="Logo CSS" class="logo">
-                    <p class="linguagem-nome">CSS3</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/javascript.png" alt="Logo JavaScript" class="logo">
-                    <p class="linguagem-nome">JavaScript</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/lua.png" alt="Logo Lua" class="logo">
-                    <p class="linguagem-nome">Lua</p>
-                </div>
-                <div class="habilidade-item">
-                    <img src="imagens/git.png" alt="Logo Git" class="logo">
-                    <p class="linguagem-nome">Git</p>
-                </div>
-            </div>
+        <div class="habilidade-item">
+          <img src="imagens/css.png" alt="Logo CSS" class="logo">
+          <p class="linguagem-nome">CSS3</p>
         </div>
-    </section>
-
-    <section id="projetos" class="section">
-        <div class="container">
-            <h2>Meus Projetos</h2>
-            <div class="project">
-                <h3>Site de Portfólio</h3>
-                <p>Este site que você está vendo, feito com HTML, CSS e JavaScript.</p>
-                <a href="https://github.com/kkrodrigues021/portfolio.git" target="_blank" class="btn">Ver no GitHub</a>
-            </div>
+        <div class="habilidade-item">
+          <img src="imagens/javascript.png" alt="Logo JavaScript" class="logo">
+          <p class="linguagem-nome">JavaScript</p>
         </div>
-    </section>
-
-    <section id="contato" class="section">
-        <div class="container">
-            <h2>Contato</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/kkrodrigues021" target="_blank" class="btn">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="btn">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:kaiky.rodrigues039@gmail.com" class="btn">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
-                </li>
-            </ul>
+        <div class="habilidade-item">
+          <img src="imagens/lua.png" alt="Logo Lua" class="logo">
+          <p class="linguagem-nome">Lua</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Kaiky Rodrigues. Todos os direitos reservados.</p>
+        <div class="habilidade-item">
+          <img src="imagens/git.png" alt="Logo Git" class="logo">
+          <p class="linguagem-nome">Git</p>
         </div>
-    </footer>
+      </div>
+    </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="projetos" class="section">
+    <div class="container">
+      <h2>Meus Projetos</h2>
+      <div class="project">
+        <h3>Site de Portfólio</h3>
+        <p>Este site que você está vendo, feito com HTML, CSS e JavaScript.</p>
+        <a href="https://github.com/kkrodrigues021/portfolio.git" target="_blank" class="btn">
+            <i class="fab fa-github"></i> Ver no GitHub
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Anima as seções conforme a rolagem da página
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
+  <section id="contato" class="section">
+    <div class="container">
+      <h2>Contato</h2>
+      <ul>
+        <li><a href="https://github.com/kkrodrigues021" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:kaiky.rodrigues039@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a></li>
+      </ul>
+    </div>
+  </section>
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+  <footer>
+    <div class="container">
+      <p>© 2025 Kaiky Rodrigues. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: -1 },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#00bfff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1.5 },
+        links: {
+          enable: true,
+          distance: 150,
+          color: "#00bfff",
+          opacity: 0.3,
+          width: 1
+        }
+      },
+      background: {
+        color: "#0d0d0d"
+      }
+    });
+  </script>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(section => observer.observe(section));
+
+    // Alternar tema
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      if (document.body.classList.contains('light-theme')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    });
+  </script>
 </body>
 </html>

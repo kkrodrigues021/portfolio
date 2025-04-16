@@ -1,18 +1,20 @@
-// Rolagem automática horizontal para a seção de habilidades
-const habilidadesScroll = document.getElementById('habilidades-scroll');
-const scrollWidth = habilidadesScroll.scrollWidth; // Largura total do conteúdo
-const containerWidth = habilidadesScroll.clientWidth; // Largura do contêiner visível
+const toggleButton = document.getElementById('toggle-theme');
+const body = document.body;
 
-let scrollPosition = 0; // Posição inicial da rolagem
-const scrollStep = 1; // Aumente este valor para uma rolagem mais rápida
+// Aplica o tema salvo
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light');
+  toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+}
 
-let scrollInterval = setInterval(() => {
-    scrollPosition += scrollStep; // Move a rolagem para a direita
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('light');
 
-    // Se a posição de rolagem atingir a largura total, reinicie
-    if (scrollPosition >= scrollWidth) {
-        scrollPosition = 0; // Reinicia a rolagem
-    }
-
-    habilidadesScroll.scrollLeft = scrollPosition; // Atualiza a posição de rolagem
-}, 30); // Ajuste a velocidade da rolagem alterando o valor aqui
+  if (body.classList.contains('light')) {
+    localStorage.setItem('theme', 'light');
+    toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    localStorage.setItem('theme', 'dark');
+    toggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+});
