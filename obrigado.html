@@ -99,8 +99,9 @@
 
     // Personaliza a mensagem se tiver nome
     if (nome) {
+      document.getElementById('titulo-agradecimento').textContent = `Obrigado, ${nome}!`;
       document.getElementById('mensagem-agradecimento').innerHTML = 
-        `Obrigado, <strong>${nome}</strong>!<br>Responderei para <strong>${email || 'seu email'}</strong> em breve.`;
+        `Recebi sua mensagem e responderei para <strong>${email || 'seu email'}</strong> em breve.`;
     }
 
     // Verifica tema salvo ou preferência do sistema
