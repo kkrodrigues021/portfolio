@@ -333,15 +333,6 @@ h2::after {
   overflow: hidden;
 }
 
-.nivel::after {
-  content: '';
-  display: block;
-  height: 100%;
-  background-color: var(--accent-color);
-  width: 0;
-  transition: width 1s ease;
-}
-
 .section.visible .nivel::after {
   width: attr(data-nivel);
 }
