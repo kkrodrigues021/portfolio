@@ -46,6 +46,7 @@ portfolio/
 │   ├── icon.png
 │   ├── javascript.png
 │   ├── lua.png
+│   ├── php.png
 │   └── python.png
 ├── obrigado.html
 └── README.md
