@@ -15,7 +15,7 @@ Portfólio profissional desenvolvido com tecnologias modernas para showcase de p
 
 ## 🛠 Tecnologias
 
-[![Tech Stack](https://skillicons.dev/icons?i=html,css,js,git,github,php)](https://skillicons.dev)
+[![Tech Stack](https://skillicons.dev/icons?i=html,css,js,php,git,github)](https://skillicons.dev)
 
 ## 🖥️ Executando Localmente
 
