@@ -1,8 +1,5 @@
 # 🚀 Portfólio Kaiky Rodrigues
 
-[![Live Demo](https://img.shields.io/badge/Demo-Portfólio-00bfff?style=for-the-badge)](https://kkrodrigues021.github.io/portfolio/)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/kkrodrigues021/portfolio?style=for-the-badge)](https://github.com/kkrodrigues021/portfolio/commits/main)
-
 Portfólio profissional desenvolvido com tecnologias modernas para showcase de projetos e habilidades em desenvolvimento web.
 
 ## ✨ Features
