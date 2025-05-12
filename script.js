@@ -148,5 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
       alert('Por favor, insira um email válido!');
     }
   });
-  
+
+  // Fallback: mostrar todas as seções no mobile se o IntersectionObserver falhar
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.add('visible');
+    });
+  }
 });
