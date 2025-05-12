@@ -51,8 +51,10 @@ portfolio/
 
 ## 🌟 Projetos Destacados
 
-- **Portfólio Interativo** (Este site!)
-- **Fúria FanBot** (Bot para Telegram)
+- **Portfólio Profissional**
+- **Fúria FanBot** - Assistente para Comunidade Esports
+- **TaskMaster Pro** - Gerenciador Inteligente de Tarefas
+- **FinControl** - Sistema de Gestão Financeira Pessoal
 
 ## 📬 Contato - Kaiky Rodrigues
 [![Website](https://img.shields.io/badge/Website-4C9F70?style=flat&logo=github&logoColor=white)](https://https://kkrodrigues021.github.io/portfolio)
