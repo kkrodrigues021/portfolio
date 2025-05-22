@@ -1,5 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Tema claro/escuro com localStorage
+document.addEventListener("DOMContentLoaded", function() {
+  // =============================================
+  // COMPORTAMENTO DE ROLAGEM AO RECARREGAR
+  // =============================================
+  history.scrollRestoration = 'manual'; // Desativa o comportamento padrão de manter a posição
+  window.scrollTo(0, 0); // Garante que inicia no topo
+
+  // Configura para voltar ao topo antes do recarregamento
+  window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+  };
+
+  // =============================================
+  // TOGGLE DE TEMA CLARO/ESCURO
+  // =============================================
   const toggleButton = document.getElementById('theme-toggle');
   const body = document.body;
   const icon = toggleButton.querySelector('i');
@@ -27,31 +40,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Animação de seções ao entrar na tela
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        
-        // Animar barras de nível de habilidade
-        if (entry.target.id === 'habilidades') {
-          const niveis = entry.target.querySelectorAll('.nivel');
-          niveis.forEach(nivel => {
-            const valor = nivel.getAttribute('data-nivel');
-            nivel.style.width = valor;
-            nivel.querySelector('::after').style.width = valor;
-          });
-        }
-        
-        observer.unobserve(entry.target);
-      }
+  // =============================================
+  // NAVEGAÇÃO POR TECLADO
+  // =============================================
+  function setupKeyboardNavigation() {
+    const mainNav = document.getElementById('main-nav');
+    const sections = document.querySelectorAll('.section');
+    
+    const navLinks = Array.from(sections).map(section => {
+      const id = section.id;
+      const title = section.querySelector('h2').textContent;
+      return `<a href="#${id}" class="nav-link">${title}</a>`;
+    }).join('');
+    
+    mainNav.innerHTML = navLinks;
+    mainNav.style.display = 'block';
+    
+    // Adicionar foco visível a todos os elementos interativos
+    document.querySelectorAll('a, button, input, textarea, [tabindex]').forEach(el => {
+      el.addEventListener('focus', () => {
+        el.style.outline = `3px solid ${getComputedStyle(document.documentElement).getPropertyValue('--accent-color')}`;
+        el.style.outlineOffset = '3px';
+      });
+      el.addEventListener('blur', () => {
+        el.style.outline = 'none';
+      });
     });
-  }, { threshold: 0.1 });
+  }
 
-  sections.forEach(section => observer.observe(section));
+  // Inicializar navegação por teclado
+  setupKeyboardNavigation();
 
-  // Efeito de digitação no título
+  // =============================================
+  // EFEITO DE DIGITAÇÃO NO TÍTULO
+  // =============================================
   const titulo = document.getElementById('typing-effect');
   if (titulo) {
     const texto = titulo.textContent;
@@ -70,10 +92,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   }
 
-  // Atualizar ano no footer
-  document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  // =============================================
+  // ATUALIZAR ANO NO FOOTER
+  // =============================================
+  const yearElement = document.getElementById('ano-atual') || document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 
-  // Configuração das partículas
+  // =============================================
+  // CONFIGURAÇÃO DAS PARTÍCULAS
+  // =============================================
   if (window.tsParticles) {
     tsParticles.load("tsparticles", {
       fullScreen: { enable: true, zIndex: -1 },
@@ -98,61 +127,52 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Formulário de contato
-  const formContato = document.getElementById('form-contato');
-  if (formContato) {
-    formContato.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      
-      const btnEnviar = this.querySelector('button[type="submit"]');
-      const originalText = btnEnviar.innerHTML;
-      
-      btnEnviar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-      btnEnviar.disabled = true;
-
-      try {
-        const response = await fetch('https://seu-backend.com/api/contato', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            nome: this.nome.value,
-            email: this.email.value,
-            mensagem: this.mensagem.value
-          })
-        });
-
-        if (response.ok) {
-          btnEnviar.innerHTML = '<i class="fas fa-check"></i> Enviado!';
-          this.reset();
-        } else {
-          throw new Error('Erro ao enviar');
+  // =============================================
+  // ANIMAÇÃO DE SEÇÕES AO ROLAR
+  // =============================================
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        
+        if (entry.target.id === 'habilidades' || entry.target.id === 'skills') {
+          const niveis = entry.target.querySelectorAll('.nivel');
+          niveis.forEach(nivel => {
+            const valor = nivel.getAttribute('data-nivel');
+            nivel.style.width = valor;
+          });
         }
-      } catch (error) {
-        btnEnviar.innerHTML = '<i class="fas fa-times"></i> Erro';
-      } finally {
-        setTimeout(() => {
-          btnEnviar.innerHTML = originalText;
-          btnEnviar.disabled = false;
-        }, 3000);
+        
+        observer.unobserve(entry.target);
       }
     });
-  }
-
-  // Validação de email antes de envio
-  document.querySelector('form').addEventListener('submit', function(e) {
-    const email = this.querySelector('input[type="email"]').value;
-    if (!email.includes('@') || !email.includes('.')) {
-      e.preventDefault();
-      alert('Por favor, insira um email válido!');
-    }
+  }, { 
+    threshold: 0.05,
+    rootMargin: '0px 0px -100px 0px'
   });
 
-  // Fallback: mostrar todas as seções no mobile se o IntersectionObserver falhar
+  sections.forEach(section => observer.observe(section));
+
+  // =============================================
+  // FALLBACK PARA MOBILE
+  // =============================================
   if (window.innerWidth <= 768) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.add('visible');
-    });
+    const projetosSection = document.getElementById('projetos') || document.getElementById('projects');
+    if (projetosSection) {
+      projetosSection.classList.add('visible');
+      projetosSection.style.opacity = '1';
+      projetosSection.style.transform = 'translateY(0)';
+    }
   }
 });
+
+// =============================================
+// COMPORTAMENTO AO SAIR/RECARREGAR A PÁGINA
+// =============================================
+window.onbeforeunload = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto'
+  });
+};

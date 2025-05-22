@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kaiky Rodrigues' Portfolio - ADS Student and Web Developer">
+  <meta name="keywords" content="portfolio, developer, ADS, programming, JavaScript, Python">
+  <title>Kaiky Rodrigues | Developer and ADS Student</title>
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Kaiky Rodrigues | Developer and ADS Student">
+  <meta property="og:description" content="Portfolio of Kaiky Rodrigues - ADS Student and Web Developer with skills in Python, JavaScript and interface development">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kkrodrigues021.github.io/portfolio/index-en.html">
+  <meta property="og:image" content="https://kkrodrigues021.github.io/portfolio/imagens/foto.jpg">
+  <meta property="og:site_name" content="Kaiky Rodrigues Portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@kkrodrigues021">
+
+  <!-- Preload resources -->
+  <link rel="preload" href="./styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" as="script">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kaiky Rodrigues",
+    "jobTitle": "Analysis and Systems Development Student",
+    "url": "https://kkrodrigues021.github.io/portfolio/index-en.html",
+    "sameAs": [
+      "https://github.com/kkrodrigues021",
+      "https://www.linkedin.com/in/kaikyrodrigues39",
+      "https://x.com/kkrodrigues021"
+    ],
+    "email": "mailto:kaiky.rodrigues039@gmail.com",
+    "telephone": "+5521991363880",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+  
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Skip Link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Particles background -->
+  <div id="tsparticles"></div>
+
+  <!-- Dark/Light mode toggle -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Keyboard navigation (hidden initially) -->
+  <nav id="main-nav" aria-label="Main navigation" style="display: none;"></nav>
+
+  <header role="banner">
+    <div class="container">
+      <h1 id="typing-effect">Hello, I'm Kaiky Rodrigues</h1>
+      <p class="subtitle">Analysis and Systems Development Student</p>
+      <p class="subtitle">Developer of applications, automations and smart interfaces</p>
+      <a href="curriculo.pdf" download="Kaiky_Rodrigues_Resume.pdf" class="btn-download">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="sobre-container">
+          <img src="imagens/foto.jpg" alt="Kaiky Rodrigues Profile Photo" class="foto-perfil" loading="lazy" decoding="async">
+          <div class="sobre-texto">
+            <p>I'm a student of Analysis and Systems Development in my 2nd semester and I have a passion for creating game scripts and modifications, as well as developing complete website systems. I'm always looking for new challenges to apply and expand my knowledge.</p>
+            <div class="destaque">
+              <p><i class="fas fa-code"></i> 3+ years of experience</p>
+              <p><i class="fas fa-project-diagram"></i> 2 complete projects</p>
+              <p><i class="fas fa-rocket"></i> Efficient solutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>My Skills</h2>
+        <div class="habilidades-grid">
+          <div class="habilidade-item">
+            <img src="imagens/python.png" alt="Python Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">Python</p>
+            <div class="nivel" data-nivel="80%"></div>
+          </div>
+          <div class="habilidade-item">
+            <img src="imagens/html.png" alt="HTML5 Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">HTML5</p>
+            <div class="nivel" data-nivel="90%"></div>
+          </div>
+          <div class="habilidade-item">
+            <img src="imagens/css.png" alt="CSS3 Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">CSS3</p>
+            <div class="nivel" data-nivel="85%"></div>
+          </div>
+          <div class="habilidade-item">
+            <img src="imagens/javascript.png" alt="JavaScript Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">JavaScript</p>
+            <div class="nivel" data-nivel="75%"></div>
+          </div>
+          <div class="habilidade-item">
+            <img src="imagens/lua.png" alt="Lua Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">Lua</p>
+            <div class="nivel" data-nivel="70%"></div>
+          </div>
+          <div class="habilidade-item">
+            <img src="imagens/git.png" alt="Git Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">Git</p>
+            <div class="nivel" data-nivel="80%"></div>
+          </div>
+          <div class="habilidade-item">
+            <img src="imagens/php.png" alt="PHP Logo" class="logo" loading="lazy" decoding="async">
+            <p class="linguagem-nome">PHP</p>
+            <div class="nivel" data-nivel="80%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="goals" class="section">
+      <div class="container">
+        <h2>Goals and Roadmap</h2>
+        <div class="sobre-container">
+          <div class="sobre-texto">
+            <h3>📌 Professional Goals</h3>
+            <p>I seek opportunities that challenge me to develop complete solutions - whether in systems development, automations, web applications or tools focused on usability and efficiency.</p>
+            <p>I'm interested in working with backend development, artificial intelligence, bots and systems integration.</p>
+    
+            <h3>🚀 Learning Roadmap</h3>
+            <ul class="project-features">
+              <li>🔧 Improve programming logic and algorithms with Python</li>
+              <li>🧠 Study data structures and object orientation in depth</li>
+              <li>🌐 Consolidate knowledge in web development (HTML, CSS, JS, PHP)</li>
+              <li>📦 Learn frameworks and libraries like Node.js, Flask or Django</li>
+              <li>🔒 Study security fundamentals and best practices</li>
+              <li>💡 Practice projects focused on portfolio and technical challenges</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="certificates" class="section">
+      <div class="container">
+        <h2>Certificates</h2>
+        <div class="certificados-container">
+          <div class="certificado">
+            <h3>Python 3</h3>
+            <p>Udemy</p>
+            <span class="horas">141h</span>
+            <span class="data">Completion: 2025</span>
+          </div>
+          <div class="certificado">
+            <h3>Introduction to Programming</h3>
+            <p>Alura</p>
+            <span class="horas">180h</span>
+            <span class="data">Completion: 2025</span>
+          </div>
+          <div class="certificado">
+            <h3>Cybersecurity Awareness</h3>
+            <p>Certiprof</p>
+            <span class="horas">35h</span>
+            <span class="data">Completed: 2024</span>
+          </div>
+          <div class="certificado">
+            <h3>Scrum Foundation</h3>
+            <p>Certiprof</p>
+            <span class="horas">20h</span>
+            <span class="data">Completed: 2024</span>
+          </div>
+          <div class="certificado">
+            <h3>Office Package</h3>
+            <p>Colégio Flama</p>
+            <span class="horas">120h</span>
+            <span class="data">Completed: 2023</span>
+          </div>
+          <div class="certificado">
+            <h3>English</h3>
+            <p>Instituto Alba Luiza</p>
+            <span class="horas">250h</span>
+            <span class="data">Completed: 2018</span>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+    <section id="projects" class="section">
+        <div class="container">
+          <h2>My Projects</h2>
+          <div class="project">
+            <h3>Professional Portfolio</h3>
+            <div class="tech-tags">
+              <span class="tag">Semantic HTML5</span>
+              <span class="tag">Advanced CSS3</span>
+              <span class="tag">JavaScript ES6+</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Modern UI/UX</span>
+              <span class="tag">Particles.js</span>
+              <span class="tag">FormSubmit</span>
+            </div>
+            <p>Professional portfolio developed to showcase my projects, skills, and journey as a front-end developer and ADS student.</p>
+            <ul class="project-features">
+              <li><strong>Architecture and Design</strong>:
+                <ul class="nested-features">
+                  <li>Modern layout with clear visual hierarchy</li>
+                  <li>Light/dark theme system with toggle</li>
+                  <li>Smooth transitions and microinteractions</li>
+                  <li>Dynamic particle effect in the background</li>
+                </ul>
+              </li>
+              <li><strong>Main Features</strong>:
+                <ul class="nested-features">
+                  <li>"About Me" section with photo and professional description</li>
+                  <li>Skills visualization with progress meters</li>
+                  <li>Project gallery with technical details</li>
+                  <li>Functional contact form integrated with FormSubmit</li>
+                  <li>Typing effect in the header</li>
+                </ul>
+              </li>
+              <li><strong>Implemented Technologies</strong>:
+                <ul class="nested-features">
+                  <li>Semantic HTML5 with accessibility (ARIA)</li>
+                  <li>CSS3 with Flexbox, Grid, and variables</li>
+                  <li>Vanilla JavaScript (no frameworks)</li>
+                  <li>tsparticles library for visual effects</li>
+                  <li>Integration with FormSubmit for emails</li>
+                  <li>Font Awesome for icons</li>
+                </ul>
+              </li>
+              <li><strong>Optimizations</strong>:
+                <ul class="nested-features">
+                  <li>Performance: 95+ on Lighthouse</li>
+                  <li>Responsiveness: Mobile-first design</li>
+                  <li>SEO: Meta tags and semantic structure</li>
+                  <li>Accessibility: Contrast and landmarks</li>
+                  <li>Loading: Lazy loading for images</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/kkrodrigues021/portfolio" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+          
+          <div class="project">
+            <h3>Fúria FanBot - Assistant for Esports Community</h3>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Telegram API</span>
+              <span class="tag">python-telegram-bot</span>
+              <span class="tag">Web Scraping</span>
+              <span class="tag">Chatbot</span>
+            </div>
+            <p>Unofficial bot for the FURIA Esports programming challenge with automated moderation, team info, and smart interaction.</p>
+            <ul class="project-features">
+              <li><strong>Interaction System</strong>:
+                <ul class="nested-features">
+                  <li>Dynamic keyboard with ReplyKeyboardMarkup</li>
+                  <li>Secret commands triggered by keywords ("vamo furia", "art", "fallen")</li>
+                  <li>Contextual responses</li>
+                </ul>
+                <li><strong>Main Features</strong>:
+                  <ul class="nested-features">
+                    <li>Current roster and upcoming matches lookup</li>
+                    <li>Curiosities about the organization</li>
+                    <li>Support message system</li>
+                    <li>Social media integration</li>
+                  </ul>
+                </li>
+                <li><strong>Implemented Technologies</strong>:
+                  <ul class="nested-features">
+                    <li>python-telegram-bot library (v20+)</li>
+                    <li>Web Scraping for automatic data updates</li>
+                    <li>Handlers for commands and messages</li>
+                    <li>Polling system for real-time updates</li>
+                  </ul>
+                </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/kkrodrigues021/chat-bot-furia" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="https://t.me/furiafanofc_bot" target="_blank" class="btn btn-live">
+                <i class="fab fa-telegram"></i> Online Demo
+              </a>
+            </div>
+          </div>
+      
+          <div class="project">
+            <h3>TaskMaster Pro - Intelligent Task Manager</h3>
+            <div class="tech-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage API</span>
+              <span class="tag">DOM Manipulation</span>
+              <span class="tag">Priority System</span>
+              <span class="tag">Dark Mode</span>
+            </div>
+            <p>Web app for personal task management with visual prioritization system and persistent local storage.</p>
+            <ul class="project-features">
+              <li><strong>Interaction System</strong>:
+                <ul class="nested-features">
+                  <li>Dynamic input with real-time validation</li>
+                  <li>Virtual keyboard optimized for mobile</li>
+                  <li>Immediate visual feedback for user actions</li>
+                </ul>
+              </li>
+              <li><strong>Main Features</strong>:
+                <ul class="nested-features">
+                  <li>Visual priority system:
+                    <ul>
+                      <li>⬇️ Low (light blue indicator)</li>
+                      <li>🔵 Medium (blue indicator)</li>
+                      <li>❗ High (red indicator)</li>
+                    </ul>
+                  </li>
+                  <li>Smart filters:
+                    <ul>
+                      <li>All tasks</li>
+                      <li>Only active</li>
+                      <li>Only completed</li>
+                    </ul>
+                  </li>
+                  <li>Completion animation with strikethrough text effect</li>
+                  <li>Automatic task counter (total/completed)</li>
+                </ul>
+              </li>
+              <li><strong>Implemented Technologies</strong>:
+                <ul class="nested-features">
+                  <li>Vanilla JavaScript ES6+ (no external dependencies)</li>
+                  <li>Local storage with LocalStorage API</li>
+                  <li>CSS Flexbox/Grid for responsive layout</li>
+                  <li>CSS transitions for smooth animations</li>
+                  <li>Event Delegation for better performance</li>
+                  <li>Design System with CSS variables</li>
+                </ul>
+              </li>
+              <li><strong>Exclusive Features</strong>:
+                <ul class="nested-features">
+                  <li>Light/dark theme toggle with persistence</li>
+                  <li>Drag-and-drop system</li>
+                  <li>In-place editing of existing tasks</li>
+                  <li>Responsiveness for all devices</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/kkrodrigues021/taskmaster-pro" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="https://kkrodrigues021.github.io/taskmaster-pro/" target="_blank" class="btn btn-live">
+                <i class="fas fa-external-link-alt"></i> Online Demo
+              </a>
+            </div>
+          </div>
+      
+          <div class="project">
+            <h3>FinControl - Personal Financial Management System</h3>
+            <div class="tech-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Chart.js</span>
+              <span class="tag">LocalStorage</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Dark Mode</span>
+            </div>
+            <p>Complete app for personal financial control with transaction logging, credit card management, and graphical expense visualization.</p>
+            <ul class="project-features">
+              <li><strong>Transaction System</strong>:
+                <ul class="nested-features">
+                  <li>Smart form with real-time validation</li>
+                  <li>Entry and exit logging with categorization</li>
+                  <li>Dynamic creation of custom categories</li>
+                  <li>Complete history with automatic filtering</li>
+                </ul>
+              </li>
+              <li><strong>Banking Module</strong>:
+                <ul class="nested-features">
+                  <li>Real-time balance control:
+                    <ul>
+                      <li>Automatic update when recording transactions</li>
+                      <li>Visual highlight for negative balance</li>
+                    </ul>
+                  </li>
+                  <li>Credit card management:
+                    <ul>
+                      <li>Registration of installment purchases</li>
+                      <li>Invoice payment with balance check</li>
+                      <li>Pending invoices visualization</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Implemented Technologies</strong>:
+                <ul class="nested-features">
+                  <li>Chart.js for graphical expense visualization</li>
+                  <li>LocalStorage for data persistence</li>
+                  <li>CSS Grid for advanced layout</li>
+                  <li>Theme system with CSS variables</li>
+                  <li>CSS animations for notifications</li>
+                  <li>Complex DOM manipulation</li>
+                </ul>
+              </li>
+              <li><strong>Exclusive Features</strong>:
+                <ul class="nested-features">
+                  <li>Animated toast notification system</li>
+                  <li>Dynamic spending category chart</li>
+                  <li>Automatic financial summary</li>
+                  <li>Light/dark mode with persistence</li>
+                  <li>Responsive design for all devices</li>
+                  <li>Contextual validation (e.g., salary only as income)</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/kkrodrigues021/fincontrol" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="https://kkrodrigues021.github.io/fincontrol/" target="_blank" class="btn btn-live">
+                <i class="fas fa-external-link-alt"></i> Online Demo
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>      
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contato-container">
+          <div class="contato-info">
+            <h3>Let's talk!</h3>
+            <p>I'm open to opportunities and collaborations. Get in touch:</p>
+            <ul class="contato-links">
+              <li><a href="mailto:kaiky.rodrigues039@gmail.com"><i class="fas fa-envelope"></i> kaiky.rodrigues039@gmail.com</a></li>
+              <li><a href="tel:+5521991363880"><i class="fas fa-phone"></i> +55 (21) 99136-3880</a></li>
+              <li><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, Brazil</li>
+            </ul>
+          </div>
+          <form class="contato-form" action="https://formsubmit.co/kaiky.rodrigues039@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="📌 New message from your portfolio!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://kkrodrigues021.github.io/portfolio/thanks.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-enviar">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+        <div class="redes-sociais">
+          <a href="https://github.com/kkrodrigues021" target="_blank" class="btn-social"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="btn-social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/kkrodrigues021" target="_blank" class="btn-social"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/kkrodrigues021" target="_blank" class="btn-social"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© <span id="current-year">2025</span> Kaiky Rodrigues. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Language selector -->
+  <div class="language-switcher">
+    <a href="index.html" class="btn-language" aria-label="Portuguese version">
+      <i class="fas fa-language"></i> Português
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+</body>
+</html>

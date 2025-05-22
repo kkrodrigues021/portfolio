@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mensagem Enviada | Kaiky Rodrigues</title>
+  <title>Kaiky Rodrigues | Mensagem Enviada</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kaiky Rodrigues | Mensagem Enviada">
+  <meta property="og:description" content="Obrigado por entrar em contato com Kaiky Rodrigues">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kkrodrigues021.github.io/portfolio/obrigado.html">
+  
+  <link rel="icon" href="imagens/icon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #0d0d0d;
-      --text-color: #cccccc;
-      --accent-color: #00bfff;
+      --bg-color: #0a0a0a;
+      --text-color: #e0e0e0;
+      --accent-color: #00a8ff;
       --container-bg: #121212;
     }
     
     body.light-theme {
-      --bg-color: #f5f5f5;
-      --text-color: #222;
-      --accent-color: #0077cc;
-      --container-bg: #ffffff;
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --accent-color: #0066cc;
+      --container-bg: #f9f9f9;
     }
 
     body {
@@ -68,8 +76,10 @@
       transition: transform 0.3s;
     }
 
-    .btn-voltar:hover {
+    .btn-voltar:hover, .btn-voltar:focus {
       transform: translateY(-3px);
+      outline: 3px solid var(--accent-color);
+      outline-offset: 3px;
     }
 
     @keyframes bounce {
@@ -77,12 +87,26 @@
       40% { transform: translateY(-20px); }
       60% { transform: translateY(-10px); }
     }
+
+    /* Acessibilidade */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" role="main">
     <div class="icon-success">
-      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-check-circle" aria-hidden="true"></i>
+      <span class="sr-only">Sucesso</span>
     </div>
     <h1 id="titulo-agradecimento">Mensagem Enviada!</h1>
     <p id="mensagem-agradecimento">Obrigado pelo seu contato!</p>
@@ -96,15 +120,20 @@
     const urlParams = new URLSearchParams(window.location.search);
     const nome = urlParams.get('nome');
     const email = urlParams.get('email');
+    const status = urlParams.get('status');
 
-    // Personaliza a mensagem se tiver nome
-    if (nome) {
+    // Personaliza a mensagem
+    if (status === 'error') {
+      document.getElementById('titulo-agradecimento').textContent = 'Erro no Envio';
+      document.getElementById('mensagem-agradecimento').textContent = 
+        'Houve um problema ao enviar sua mensagem. Por favor, tente novamente mais tarde.';
+    } else if (nome) {
       document.getElementById('titulo-agradecimento').textContent = `Obrigado, ${nome}!`;
       document.getElementById('mensagem-agradecimento').innerHTML = 
         `Recebi sua mensagem e responderei para <strong>${email || 'seu email'}</strong> em breve.`;
     }
 
-    // Verifica tema salvo ou preferência do sistema
+    // Verifica tema salvo
     const savedTheme = localStorage.getItem('theme') || 
                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     
