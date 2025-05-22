@@ -16,18 +16,18 @@ Portfólio profissional desenvolvido com tecnologias modernas para showcase de p
 ✔️ **Navegação por teclado** e skip links  
 
 ## 🌐 Demonstração
-[![Live Demo](https://img.shields.io/badge/Demo-Online-4C9F70?style=flat)](https://kkrodrigues021.github.io/portfolio){:target="_blank"}
-▶️ [Versão em Português](https://kkrodrigues021.github.io/portfolio){:target="_blank"}
-▶️ [English Version](https://kkrodrigues021.github.io/portfolio/index-en.html){:target="_blank"}
+[![Live Demo](https://img.shields.io/badge/Demo-Online-4C9F70?style=flat)](https://kkrodrigues021.github.io/portfolio)  
+▶️ [Versão em Português](https://kkrodrigues021.github.io/portfolio)
+▶️ [English Version](https://kkrodrigues021.github.io/portfolio/index-en.html)
 
 ## 🛠 Tecnologias
 
 [![Tech Stack](https://skillicons.dev/icons?i=html,css,js,php,git,github)](https://skillicons.dev)
 
 ### 📚 Bibliotecas
-- [tsparticles.js](https://particles.js.org/){:target="_blank"} - Efeitos de partículas
-- [Font Awesome](https://fontawesome.com/){:target="_blank"} - Ícones
-- [Google Fonts](https://fonts.google.com/){:target="_blank"} - Tipografia
+- [tsparticles.js](https://particles.js.org/) - Efeitos de partículas
+- [Font Awesome](https://fontawesome.com/) - Ícones
+- [Google Fonts](https://fonts.google.com/) - Tipografia
 
 ## 🖥️ Executando Localmente
 
@@ -81,9 +81,9 @@ portfolio/
 - Suporte a prefers-reduced-motion
 
 ## 📬 Contato - Kaiky Rodrigues
-[![Website](https://img.shields.io/badge/Website-4C9F70?style=flat&logo=github&logoColor=white)](https://https://kkrodrigues021.github.io/portfolio){:target="_blank"}
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaikyrodrigues39){:target="_blank"}
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:kaiky.rodrigues039@gmail.com){:target="_blank"}
+[![Website](https://img.shields.io/badge/Website-4C9F70?style=flat&logo=github&logoColor=white)](https://https://kkrodrigues021.github.io/portfolio)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaikyrodrigues39)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:kaiky.rodrigues039@gmail.com)
 
 ## 📜 Licença
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
