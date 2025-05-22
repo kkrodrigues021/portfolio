@@ -17,7 +17,7 @@ Portfólio profissional desenvolvido com tecnologias modernas para showcase de p
 
 ## 🌐 Demonstração
 [![Live Demo](https://img.shields.io/badge/Demo-Online-4C9F70?style=flat)](https://kkrodrigues021.github.io/portfolio)  
-▶️ [Versão em Português](https://kkrodrigues021.github.io/portfolio)
+▶️ [Versão em Português](https://kkrodrigues021.github.io/portfolio)  
 ▶️ [English Version](https://kkrodrigues021.github.io/portfolio/index-en.html)
 
 ## 🛠 Tecnologias
