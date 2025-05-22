@@ -43,6 +43,7 @@ cd portfolio
 4. Clique com o botão direito no index.html → Open with Live Server
 
 ## 📂 Estrutura do Projeto
+```
 portfolio/
 ├── index.html          # Versão em português
 ├── index-en.html       # English version
@@ -64,6 +65,7 @@ portfolio/
 │   ├── php.png
 │   └── python.png
 └── README.md
+```
 
 ##🌟 Projetos Destacados
 - Portfólio Profissional - Design moderno com modo claro/escuro
@@ -82,3 +84,7 @@ portfolio/
 [![Website](https://img.shields.io/badge/Website-4C9F70?style=flat&logo=github&logoColor=white)](https://https://kkrodrigues021.github.io/portfolio)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaikyrodrigues39)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:kaiky.rodrigues039@gmail.com)
+
+## 📜 Licença
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Este projeto está licenciado sob a licença MIT - veja o [arquivo LICENSE](LICENSE) para detalhes.
