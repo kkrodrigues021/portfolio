@@ -86,5 +86,5 @@ portfolio/
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:kaiky.rodrigues039@gmail.com)
 
 ## 📜 Licença
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-Este projeto está licenciado sob a licença MIT - veja o [arquivo LICENSE](LICENSE.md) para detalhes.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Este projeto está licenciado sob a licença MIT - veja o [arquivo LICENSE](LICENSE) para detalhes.
