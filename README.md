@@ -48,7 +48,7 @@ portfolio/
 ├── index.html          # Versão em português
 ├── index-en.html       # English version
 ├── obrigado.html       # Página de agradecimento (PT)
-├── thanks.html      # Thank you page (EN)
+├── thanks.html         # Thank you page (EN)
 ├── styles.css          # Estilos principais
 ├── script.js           # Lógica principal
 ├── enviar.php          # Processamento do formulário
