@@ -165,6 +165,16 @@ document.addEventListener("DOMContentLoaded", function() {
       projetosSection.style.transform = 'translateY(0)';
     }
   }
+
+  // Menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('#main-nav .nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
 });
 
 // =============================================

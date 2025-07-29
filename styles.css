@@ -140,7 +140,7 @@
   /* Botão de tema */
   .theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 2px;
     right: 20px;
     background: transparent;
     border: 2px solid var(--accent-color);
@@ -149,7 +149,7 @@
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
-    z-index: 100;
+    z-index: 1001;
     transition: all 0.3s ease;
   }
   
@@ -808,4 +808,78 @@
   
   .fa-telegram {
     color: #0088cc;
+  }
+
+  /* Navbar */
+  #main-nav {
+    background-color: var(--container-bg);
+    border-bottom: 2px solid var(--accent-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0.5rem 0;
+    transition: background-color 0.3s ease;
+  }
+
+  #main-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #main-nav .logo a {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+
+  #main-nav .menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    cursor: pointer;
+  }
+
+  #main-nav .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  #main-nav .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  #main-nav .nav-links a:hover {
+    color: var(--accent-color);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    #main-nav .menu-toggle {
+      display: block;
+    }
+    #main-nav .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--container-bg);
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      display: none;
+    }
+    #main-nav .nav-links.show {
+      display: flex;
+    }
   }
