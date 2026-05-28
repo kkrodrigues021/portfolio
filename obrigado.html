@@ -3,142 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaiky Rodrigues | Mensagem Enviada</title>
+  <title>Kaiky Rodrigues | Diagnóstico Recebido</title>
   
-  <!-- Open Graph -->
   <meta property="og:title" content="Kaiky Rodrigues | Mensagem Enviada">
   <meta property="og:description" content="Obrigado por entrar em contato com Kaiky Rodrigues">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kkrodrigues021.github.io/portfolio/obrigado.html">
   
   <link rel="icon" href="imagens/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --bg-color: #0a0a0a;
-      --text-color: #e0e0e0;
-      --accent-color: #00a8ff;
-      --container-bg: #121212;
-    }
-    
-    body.light-theme {
-      --bg-color: #ffffff;
-      --text-color: #333333;
-      --accent-color: #0066cc;
-      --container-bg: #f9f9f9;
+      --bg: #050505;
+      --text: #f4f4f5;
+      --muted: #71717a;
+      --border: #27272a;
+      --success: #10b981;
+      --error: #ef4444;
     }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      text-align: center;
-      margin: 0;
-      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', sans-serif;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      transition: background 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .noise {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none; z-index: 9999; opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     }
 
     .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: var(--container-bg);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 5rem 2rem;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+      max-width: 800px;
+      width: 90%;
+    }
+
+    .status-label {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--success);
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
     }
 
     h1 {
-      color: var(--accent-color);
-      font-size: 2.5rem;
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -2px;
       margin-bottom: 1.5rem;
+      line-height: 1;
     }
 
-    .icon-success {
-      font-size: 5rem;
-      color: var(--accent-color);
-      margin-bottom: 1.5rem;
-      animation: bounce 1s;
+    p {
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin-bottom: 4rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .btn-voltar {
+    .btn-back {
       display: inline-block;
-      margin-top: 2rem;
-      padding: 12px 24px;
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 30px;
+      padding: 1.2rem 2.5rem;
+      background: var(--text);
+      color: var(--bg);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
       text-decoration: none;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
+      font-size: 1rem;
     }
 
-    .btn-voltar:hover, .btn-voltar:focus {
-      transform: translateY(-3px);
-      outline: 3px solid var(--accent-color);
-      outline-offset: 3px;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-20px); }
-      60% { transform: translateY(-10px); }
-    }
-
-    /* Acessibilidade */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
+    .btn-back:hover {
+      background: transparent;
+      color: var(--text);
+      box-shadow: inset 0 0 0 1px var(--text);
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main">
-    <div class="icon-success">
-      <i class="fas fa-check-circle" aria-hidden="true"></i>
-      <span class="sr-only">Sucesso</span>
+  <div class="noise"></div>
+  
+  <div class="container">
+    <div class="status-label" id="status-label">
+      <span class="status-dot" id="status-dot"></span> TRANSMISSÃO CONCLUÍDA
     </div>
-    <h1 id="titulo-agradecimento">Mensagem Enviada!</h1>
-    <p id="mensagem-agradecimento">Obrigado pelo seu contato!</p>
-    <a href="https://kkrodrigues021.github.io/portfolio/" class="btn-voltar">
-        <i class="fas fa-arrow-left"></i> Voltar ao Portfólio
-    </a>
+    <h1 id="titulo-agradecimento">DIAGNÓSTICO RECEBIDO</h1>
+    <p id="mensagem-agradecimento">Aguarde o contato no e-mail informado para darmos andamento ao alinhamento estratégico.</p>
+    <a href="index.html" class="btn-back">RETORNAR AO DOSSIÊ ↘</a>
   </div>
 
   <script>
-    // Verifica parâmetros da URL
     const urlParams = new URLSearchParams(window.location.search);
     const nome = urlParams.get('nome');
-    const email = urlParams.get('email');
     const status = urlParams.get('status');
 
-    // Personaliza a mensagem
     if (status === 'error') {
-      document.getElementById('titulo-agradecimento').textContent = 'Erro no Envio';
-      document.getElementById('mensagem-agradecimento').textContent = 
-        'Houve um problema ao enviar sua mensagem. Por favor, tente novamente mais tarde.';
+      const label = document.getElementById('status-label');
+      label.style.color = 'var(--error)';
+      label.innerHTML = '<span class="status-dot" style="background: var(--error); box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);"></span> FALHA NA TRANSMISSÃO';
+      
+      document.getElementById('titulo-agradecimento').textContent = 'ERRO DE SISTEMA';
+      document.getElementById('mensagem-agradecimento').textContent = 'Ocorreu uma falha ao processar seus dados de contato. Por favor, tente novamente mais tarde ou envie um e-mail direto.';
     } else if (nome) {
-      document.getElementById('titulo-agradecimento').textContent = `Obrigado, ${nome}!`;
-      document.getElementById('mensagem-agradecimento').innerHTML = 
-        `Recebi sua mensagem e responderei para <strong>${email || 'seu email'}</strong> em breve.`;
-    }
-
-    // Verifica tema salvo
-    const savedTheme = localStorage.getItem('theme') || 
-                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    if (savedTheme === 'light') {
-      document.body.classList.add('light-theme');
+      document.getElementById('mensagem-agradecimento').innerHTML = `Obrigado, <strong>${nome}</strong>. Seus dados foram computados e entraremos em contato em breve.`;
     }
   </script>
 </body>

@@ -1,541 +1,380 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfólio de Kaiky Rodrigues - Estudante de ADS e Desenvolvedor Web">
-  <meta name="keywords" content="portfolio, desenvolvedor, ADS, programação, JavaScript, Python">
-  <title>Kaiky Rodrigues | Desenvolvedor e Estudante de ADS</title>
-  
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Kaiky Rodrigues | Desenvolvedor e Estudante de ADS">
-  <meta property="og:description" content="Portfólio de Kaiky Rodrigues - Estudante de ADS e Desenvolvedor Web com habilidades em Python, JavaScript e desenvolvimento de interfaces">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kkrodrigues021.github.io/portfolio/">
-  <meta property="og:image" content="https://kkrodrigues021.github.io/portfolio/imagens/foto.jpg">
-  <meta property="og:site_name" content="Portfólio Kaiky Rodrigues">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:creator" content="@kkrodrigues021">
-
-  <!-- Preload de recursos -->
-  <link rel="preload" href="./styles.css" as="style">
-  <link rel="preload" href="script.js" as="script">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" as="script">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaiky Rodrigues | CEO & Engenharia de TI</title>
+  <meta name="description" content="Engenharia de Software, Infraestrutura Corporativa B2B e Liderança Técnica.">
   
   <link rel="icon" href="imagens/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="./styles.css">
-  
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kaiky Rodrigues",
-    "jobTitle": "Estudante de Análise e Desenvolvimento de Sistemas",
-    "url": "https://kkrodrigues021.github.io/portfolio/",
-    "sameAs": [
-      "https://github.com/kkrodrigues021",
-      "https://www.linkedin.com/in/kaikyrodrigues39",
-      "https://x.com/kkrodrigues021"
-    ],
-    "email": "mailto:kaiky.rodrigues039@gmail.com",
-    "telephone": "+5521991363880",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rio de Janeiro",
-      "addressRegion": "RJ",
-      "addressCountry": "BR"
-    }
-  }
-  </script>
-  
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Skip Link para acessibilidade -->
-  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+  <div class="noise"></div>
+  <div id="scroll-progress"></div>
 
-  <!-- Fundo com partículas -->
-  <div id="tsparticles"></div>
-
-  <!-- Botão de modo escuro/claro -->
-  <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Menu de navegação -->
-  <nav id="main-nav" aria-label="Navegação principal">
-    <div class="container">
-      <div class="logo">
-        <a href="#topo">Kaiky</a>
-      </div>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#objetivos">Objetivos</a></li>
-        <li><a href="#certificados">Certificados</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+  <nav class="top-bar">
+    <div class="brand">
+      K.R
+      <span class="badge">CEO/ENG</span>
+      <span class="status-indicator" title="System Online - Accepting B2B Projects">
+        <span class="status-dot"></span> ONLINE
+      </span>
+    </div>
+    <div class="nav-links">
+      <a href="#expertise">Expertise</a>
+      <a href="#carreira">Carreira</a>
+      <a href="#formacao">Formação</a>
+      <a href="#sistemas">Sistemas</a>
+      <a href="#certificacoes">Certificações</a>
     </div>
   </nav>
 
-  <!-- Navegação por teclado (oculta inicialmente) -->
-  <nav id="main-nav" aria-label="Navegação principal" style="display: none;"></nav>
-
-  <header role="banner">
-    <div class="container">
-      <h1 id="typing-effect">Olá, me chamo Kaiky Rodrigues</h1>
-      <p class="subtitle">Estudante de Análise e Desenvolvimento de Sistemas</p>
-      <p class="subtitle">Desenvolvedor de aplicações, automações e interfaces inteligentes</p>
-      <a href="curriculo.pdf" download="Kaiky_Rodrigues_Curriculo.pdf" class="btn-download">
-        <i class="fas fa-download"></i> Baixar Currículo
-      </a>
+  <header class="hero section">
+    <div class="hero-title-wrapper">
+      <div class="dossier-photo">
+        <img src="imagens/foto.jpg" alt="Foto de Kaiky Rodrigues" class="profile-img">
+      </div>
+      <h1 class="title-massive">
+        <span class="outline">KAIKY</span><br>
+        RODRIGUES
+      </h1>
+    </div>
+    
+    <div class="hero-dossier">
+      <div class="dossier-col">
+        <span class="label">CURRENT POSITION</span>
+        <p>CEO @ ZYNIT</p>
+        <p>Support Technician @ TIVIT</p>
+      </div>
+      <div class="dossier-col">
+        <span class="label">OPERATIONAL SCOPE</span>
+        <p>Corporate Infrastructure</p>
+        <p>Algorithmic Development</p>
+      </div>
+      <div class="dossier-col">
+        <span class="label">BASE & ASSETS</span>
+        <p>Rio de Janeiro, BR</p>
+        <a href="curriculo.pdf" download class="btn-outline-hero" style="margin-top: 5px; display: inline-block;">BAIXAR CURRÍCULO ↘</a>
+      </div>
     </div>
   </header>
 
-  <main id="main-content">
-    <section id="sobre" class="section">
-      <div class="container">
-        <h2>Sobre Mim</h2>
-        <div class="sobre-container">
-          <img src="imagens/foto.jpg" alt="Foto de Perfil de Kaiky Rodrigues" class="foto-perfil">
-          <div class="sobre-texto">
-            <p>Sou estudante de Análise e Desenvolvimento de Sistemas no 3º período e tenho uma paixão por criar scripts e modificações para jogos, além de desenvolver sistemas completos de sites. Estou sempre em busca de novos desafios para aplicar e expandir meus conhecimentos.</p>
-            <div class="destaque">
-              <p><i class="fas fa-code"></i> 2+ anos de experiência</p>
-              <p><i class="fas fa-project-diagram"></i> 4 projetos completos</p>
-              <p><i class="fas fa-rocket"></i> Soluções eficientes</p>
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="ticker-item">SCRUM</span><span class="ticker-item">•</span>
+      <span class="ticker-item">PYTHON / LUA</span><span class="ticker-item">•</span>
+      <span class="ticker-item">ACTIVE DIRECTORY</span><span class="ticker-item">•</span>
+      <span class="ticker-item">JAVASCRIPT / PHP</span><span class="ticker-item">•</span>
+      <span class="ticker-item">SCCM / LAPS UI</span><span class="ticker-item">•</span>
+      <span class="ticker-item">CYBERSECURITY</span><span class="ticker-item">•</span>
+      <span class="ticker-item">SCRUM</span><span class="ticker-item">•</span>
+      <span class="ticker-item">PYTHON / LUA</span><span class="ticker-item">•</span>
+      <span class="ticker-item">ACTIVE DIRECTORY</span><span class="ticker-item">•</span>
+      <span class="ticker-item">JAVASCRIPT / PHP</span><span class="ticker-item">•</span>
+      <span class="ticker-item">SCCM / LAPS UI</span><span class="ticker-item">•</span>
+      <span class="ticker-item">CYBERSECURITY</span><span class="ticker-item">•</span>
+    </div>
+  </div>
+
+  <main>
+    <section id="expertise" class="section section-pad border-bottom">
+      <h2 class="section-title">01 // DOMÍNIO TÉCNICO</h2>
+      
+      <div class="bento-grid">
+        <div class="bento-card col-span-2">
+          <div class="card-header">
+            <h3>Infraestrutura Crítica & Suporte</h3>
+          </div>
+          <p>Gestão profunda de identidades corporativas (Active Directory, SCCM, LAPS UI). Suporte multinível focado em mitigar downtime e blindar operações empresariais de ponta a ponta.</p>
+        </div>
+
+        <div class="bento-card bg-invert">
+          <div class="card-header">
+            <h3>Dev & Sistemas</h3>
+          </div>
+          <p>Engenharia de aplicações e arquitetura de dados corporativos. Desenvolvimento full-cycle de APIs, PWAs e sistemas de controle.</p>
+        </div>
+
+        <div class="bento-card">
+          <div class="card-header">
+            <h3>Visão B2B</h3>
+          </div>
+          <p>Liderança tecnológica, gerenciamento ágil e infraestrutura digital desenhada especificamente para escalar operações de negócios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section section-pad border-bottom">
+      <h2 class="section-title">02 // STACK TECNOLÓGICA</h2>
+      
+      <div class="tech-grid">
+        <div class="tech-box"><img src="imagens/python.png" alt="Python"><span>PYTHON</span></div>
+        <div class="tech-box"><img src="imagens/javascript.png" alt="JavaScript"><span>JAVASCRIPT</span></div>
+        <div class="tech-box"><img src="imagens/php.png" alt="PHP"><span>PHP</span></div>
+        <div class="tech-box"><img src="imagens/mysql.png" alt="MySQL"><span>MYSQL</span></div>
+        <div class="tech-box"><img src="imagens/lua.png" alt="Lua"><span>LUA</span></div>
+        <div class="tech-box"><img src="imagens/html.png" alt="HTML5"><span>HTML5</span></div>
+        <div class="tech-box"><img src="imagens/css.png" alt="CSS3"><span>CSS3</span></div>
+        <div class="tech-box"><img src="imagens/git.png" alt="Git"><span>GIT</span></div>
+        <div class="tech-box"><img src="imagens/github.png" alt="GitHub"><span>GITHUB</span></div>
+      </div>
+    </section>
+
+    <section id="carreira" class="section section-pad border-bottom">
+      <h2 class="section-title">03 // HISTÓRICO CORPORATIVO</h2>
+      
+      <div class="exp-timeline">
+        <div class="exp-item active-item">
+          <div class="exp-meta">
+            <span class="exp-status"><span class="status-dot"></span> STATUS // OPERACIONAL</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-role">Técnico de Suporte <span>@ TIVIT</span></h3>
+            <p class="exp-loc">Rio de Janeiro, Brasil · Tempo Integral</p>
+            <p class="exp-desc">Gestão de incidentes críticos, suporte técnico multinível e infraestrutura corporativa avançada. Administração de senhas com LAPS UI, gerenciamento via Active Directory e monitoramento de segurança com LookoutStatus.</p>
+            <div class="exp-skills">
+              <span class="inline-tag">LAPS UI</span>
+              <span class="inline-tag">Active Directory</span>
+              <span class="inline-tag">SCCM</span>
+              <span class="inline-tag">Field Service</span>
+              <span class="inline-tag">Windows/Linux/Mac</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-status" style="color: var(--muted);"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-role">Analista de Suporte <span>@ Atos</span></h3>
+            <p class="exp-loc">Rio de Janeiro, Brasil · Terceirizado</p>
+            <p class="exp-desc">Diagnóstico e resolução de problemas via Field Service. Atuação intensiva em Active Directory e apoio direto a softwares corporativos.</p>
+            <div class="exp-skills">
+              <span class="inline-tag">Active Directory</span>
+              <span class="inline-tag">Apoio em Softwares</span>
+              <span class="inline-tag">Suporte Local/Remoto</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-status" style="color: var(--muted);"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-role">Técnico em Informática <span>@ GRUPO MV3</span></h3>
+            <p class="exp-loc">Rio de Janeiro, Brasil · Tempo Integral</p>
+            <p class="exp-desc">Infraestrutura de tecnologia, administração de redes LAN/WAN, controle de inventário de TI e estruturação de operações para E-Commerce.</p>
+            <div class="exp-skills">
+              <span class="inline-tag">Infraestrutura de TI</span>
+              <span class="inline-tag">Redes LAN-WAN</span>
+              <span class="inline-tag">Gestão de E-Commerce</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    
-    <section id="habilidades" class="section">
-      <div class="container">
-        <h2>Minhas Habilidades</h2>
-        <div class="habilidades-grid">
-          <div class="habilidade-item">
-            <img src="imagens/python.png" alt="Logo Python" class="logo" loading="lazy">
-            <p class="linguagem-nome">Python</p>
-            <div class="nivel" data-nivel="80%"></div>
+    <section id="formacao" class="section section-pad border-bottom">
+      <h2 class="section-title">04 // BASE ACADÊMICA</h2>
+      
+      <div class="exp-timeline">
+        <div class="exp-item active-item">
+          <div class="exp-meta">
+            <span class="exp-status"><span class="status-dot info"></span> STATUS // EM PROGRESSO</span>
           </div>
-          <div class="habilidade-item">
-            <img src="imagens/php.png" alt="Logo PHP" class="logo" loading="lazy">
-            <p class="linguagem-nome">PHP</p>
-            <div class="nivel" data-nivel="80%"></div>
+          <div class="exp-content">
+            <h3 class="exp-role">Análise e Desenvolvimento de Sistemas <span>@ Centro Universitário Celso Lisboa</span></h3>
+            <p class="exp-loc">Bacharelado</p>
+            <p class="exp-desc">Graduação focada em engenharia de software, banco de dados, linguagens de programação e arquitetura avançada de sistemas.</p>
+            <div class="exp-skills">
+              <span class="inline-tag">Python</span>
+              <span class="inline-tag">PHP</span>
+              <span class="inline-tag">JavaScript</span>
+              <span class="inline-tag">MySQL</span>
+              <span class="inline-tag">Git/GitHub</span>
+            </div>
           </div>
-          <div class="habilidade-item">
-            <img src="imagens/mysql.png" alt="Logo MySQL" class="logo" loading="lazy">
-            <p class="linguagem-nome">MySQL</p>
-            <div class="nivel" data-nivel="80%"></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-status" style="color: var(--muted);"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
           </div>
-          <div class="habilidade-item">
-            <img src="imagens/html.png" alt="Logo HTML" class="logo" loading="lazy">
-            <p class="linguagem-nome">HTML5</p>
-            <div class="nivel" data-nivel="90%"></div>
-          </div>
-          <div class="habilidade-item">
-            <img src="imagens/css.png" alt="Logo CSS" class="logo" loading="lazy">
-            <p class="linguagem-nome">CSS3</p>
-            <div class="nivel" data-nivel="85%"></div>
-          </div>
-          <div class="habilidade-item">
-            <img src="imagens/javascript.png" alt="Logo JavaScript" class="logo" loading="lazy">
-            <p class="linguagem-nome">JavaScript</p>
-            <div class="nivel" data-nivel="75%"></div>
-          </div>
-          <div class="habilidade-item">
-            <img src="imagens/lua.png" alt="Logo Lua" class="logo" loading="lazy">
-            <p class="linguagem-nome">Lua</p>
-            <div class="nivel" data-nivel="70%"></div>
-          </div>
-          <div class="habilidade-item">
-            <img src="imagens/git.png" alt="Logo Git" class="logo" loading="lazy">
-            <p class="linguagem-nome">Git</p>
-            <div class="nivel" data-nivel="80%"></div>
-          </div>
-          <div class="habilidade-item">
-            <img src="imagens/github.png" alt="Logo GitHub" class="logo" loading="lazy">
-            <p class="linguagem-nome">GitHub</p>
-            <div class="nivel" data-nivel="80%"></div>
+          <div class="exp-content">
+            <h3 class="exp-role">Tecnologia da Informação <span>@ Colégio Flama</span></h3>
+            <p class="exp-loc">Ensino Secundário Profissional</p>
+            <p class="exp-desc">Base estrutural em redes LAN-WAN, lógica de programação e desenvolvimento de sistemas front-end e back-end.</p>
+            <div class="exp-skills">
+              <span class="inline-tag">Redes LAN-WAN</span>
+              <span class="inline-tag">HTML/CSS</span>
+              <span class="inline-tag">Python/PHP</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <section id="objetivos" class="section">
-      <div class="container">
-        <h2>Objetivos e Roadmap</h2>
-        <div class="sobre-container">
-          <div class="sobre-texto">
-            <h3>📌 Objetivos Profissionais</h3>
-            <p>Busco oportunidades que me desafiem a desenvolver soluções completas — seja no desenvolvimento de sistemas, automações, aplicações web ou ferramentas com foco em usabilidade e eficiência.</p>
-            <p>Tenho interesse em atuar com desenvolvimento backend, inteligência artificial, bots e integração de sistemas.</p>
-    
-            <h3>🚀 Roadmap de Aprendizado</h3>
-            <ul class="project-features">
-              <li>🔧 Aprimorar lógica de programação e algoritmos com Python</li>
-              <li>🧠 Estudar estruturas de dados e orientação a objetos com mais profundidade</li>
-              <li>🌐 Consolidar conhecimentos em desenvolvimento web (HTML, CSS, JS, PHP)</li>
-              <li>📦 Aprender frameworks e bibliotecas como Node.js, Flask ou Django</li>
-              <li>🔒 Estudar fundamentos de segurança e boas práticas</li>
-              <li>💡 Praticar projetos com foco em portfólio e desafios técnicos</li>
-            </ul>
+
+    <section id="sistemas" class="section section-pad border-bottom">
+      <h2 class="section-title">05 // INDEX DE SISTEMAS</h2>
+      
+      <div class="table-cases">
+        <a href="https://zynit.netlify.app" target="_blank" class="case-row active-item">
+          <div class="row-meta"><span class="status-dot"></span> OPERAÇÃO B2B // STARTUP</div>
+          <div class="row-title">ZYNIT</div>
+          <div class="row-desc">
+            <div class="mb-1">Liderança executiva como CEO. Desenvolvimento estrutural de ecossistemas corporativos, sistemas de gestão financeira e orquestração de TI para o mercado B2B.</div>
+            <span class="inline-tag">Business</span> <span class="inline-tag">PWA</span> <span class="inline-tag">Infraestrutura</span>
           </div>
-        </div>
+          <div class="row-arrow">↗</div>
+        </a>
+
+        <a href="https://github.com/kkrodrigues021/portfolio" target="_blank" class="case-row">
+          <div class="row-meta">REPOSITÓRIO // UI ARCHITECTURE</div>
+          <div class="row-title">Corporate Portfolio V2</div>
+          <div class="row-desc">
+            <div class="mb-1">Plataforma web de alto padrão. Tech Brutalism, sistema de temas, microinterações magnéticas e otimização SEO extrema (Lighthouse 95+).</div>
+            <span class="inline-tag">HTML5/CSS3</span> <span class="inline-tag">JavaScript</span> <span class="inline-tag">Particles.js</span>
+          </div>
+          <div class="row-arrow">↗</div>
+        </a>
+
+        <a href="https://github.com/kkrodrigues021/fincontrol" target="_blank" class="case-row">
+          <div class="row-meta">PROJETO // JAVASCRIPT</div>
+          <div class="row-title">FinControl System</div>
+          <div class="row-desc">
+            <div class="mb-1">Aplicativo de controle financeiro. Categorização dinâmica, validação contextual rígida em tempo real, engine gráfica e gestão de cartões de crédito.</div>
+            <span class="inline-tag">JavaScript</span> <span class="inline-tag">Chart.js</span> <span class="inline-tag">LocalStorage API</span>
+          </div>
+          <div class="row-arrow">↗</div>
+        </a>
+
+        <a href="https://github.com/kkrodrigues021/taskmaster-pro" target="_blank" class="case-row">
+          <div class="row-meta">PROJETO // JS & DOM</div>
+          <div class="row-title">TaskMaster Pro</div>
+          <div class="row-desc">
+            <div class="mb-1">Gerenciador corporativo de tarefas com manipulação avançada de DOM. Sistema visual de triagem de prioridades, filtros inteligentes e persistência.</div>
+            <span class="inline-tag">JavaScript</span> <span class="inline-tag">DOM Manipulation</span> <span class="inline-tag">Priority System</span>
+          </div>
+          <div class="row-arrow">↗</div>
+        </a>
+
+        <a href="https://github.com/kkrodrigues021/chat-bot-furia" target="_blank" class="case-row">
+          <div class="row-meta">PROJETO // PYTHON API</div>
+          <div class="row-title">Fúria FanBot</div>
+          <div class="row-desc">
+            <div class="mb-1">Automação backend construída em Python integrando a API do Telegram. Teclado dinâmico, Web Scraping para dados em tempo real e comandos restritos.</div>
+            <span class="inline-tag">Python</span> <span class="inline-tag">Telegram API</span> <span class="inline-tag">Web Scraping</span>
+          </div>
+          <div class="row-arrow">↗</div>
+        </a>
+
+        <a href="https://github.com/kkrodrigues021/sistema-bancario-dio" target="_blank" class="case-row">
+          <div class="row-meta">PROJETO // PYTHON BACKEND</div>
+          <div class="row-title">Sistema Bancário Core</div>
+          <div class="row-desc">
+            <div class="mb-1">Arquitetura de transações bancárias. Lógica orientada a objetos (POO) focada em controle rigoroso de saldo e segurança de extratos.</div>
+            <span class="inline-tag">Python</span> <span class="inline-tag">Backend</span> <span class="inline-tag">POO</span>
+          </div>
+          <div class="row-arrow">↗</div>
+        </a>
       </div>
     </section>
-    
-    <section id="certificados" class="section">
-      <div class="container">
-        <h2>Certificados</h2>
-        <div class="certificados-container">
-          <div class="certificado">
-            <h3>Python 3</h3>
-            <p>Udemy</p>
-            <span class="horas">141h</span>
-            <span class="data">Conclusão: 2025</span>
-          </div>
-          <div class="certificado">
-            <h3>Introdução à Programação</h3>
-            <p>Alura</p>
-            <span class="horas">180h</span>
-            <span class="data">Conclusão: 2025</span>
-          </div>
-          <div class="certificado">
-            <h3>Cybersecurity Awareness</h3>
-            <p>Certiprof</p>
-            <span class="horas">35h</span>
-            <span class="data">Concluído: 2024</span>
-          </div>
-          <div class="certificado">
-            <h3>Scrum Foundation</h3>
-            <p>Certiprof</p>
-            <span class="horas">20h</span>
-            <span class="data">Concluído: 2024</span>
-          </div>
-          <div class="certificado">
-            <h3>Pacote Office</h3>
-            <p>Colégio Flama</p>
-            <span class="horas">120h</span>
-            <span class="data">Concluído: 2023</span>
-          </div>
-          <div class="certificado">
-            <h3>Inglês</h3>
-            <p>Instituto Alba Luiza</p>
-            <span class="horas">250h</span>
-            <span class="data">Concluído: 2018</span>
-          </div>
-        </div>
-      </div>
-    </section>  
-  
-    <section id="projetos" class="section">
-      <div class="container">
-        <h2>Meus Projetos</h2>
-        <div class="project">
-          <h3>Portfólio Profissional</h3>
-          <div class="tech-tags">
-            <span class="tag">HTML5 Semântico</span>
-            <span class="tag">CSS3 Avançado</span>
-            <span class="tag">JavaScript ES6+</span>
-            <span class="tag">Responsive Design</span>
-            <span class="tag">UI/UX Moderno</span>
-            <span class="tag">Particles.js</span>
-            <span class="tag">FormSubmit</span>
-          </div>
-          <p>Portfólio profissional desenvolvido para apresentar meus projetos, habilidades e trajetória como desenvolvedor front-end e estudante de ADS.</p>
-          <ul class="project-features">
-            <li><strong>Arquitetura e Design</strong>:
-              <ul class="nested-features">
-                <li>Layout moderno com hierarquia visual clara</li>
-                <li>Sistema de temas claro/escuro com toggle</li>
-                <li>Transições e microinterações fluidas</li>
-                <li>Efeito de partículas dinâmicas no background</li>
-              </ul>
-            </li>
-            <li><strong>Funcionalidades Principais</strong>:
-              <ul class="nested-features">
-                <li>Seção "Sobre mim" com foto e descrição profissional</li>
-                <li>Visualização de habilidades com medidores de progresso</li>
-                <li>Galeria de projetos com detalhamento técnico</li>
-                <li>Formulário de contato funcional integrado ao FormSubmit</li>
-                <li>Efeito de digitação (typing effect) no cabeçalho</li>
-              </ul>
-            </li>
-            <li><strong>Tecnologias Implementadas</strong>:
-              <ul class="nested-features">
-                <li>HTML5 semântico com acessibilidade (ARIA)</li>
-                <li>CSS3 com Flexbox, Grid e variáveis</li>
-                <li>JavaScript vanilla (sem frameworks)</li>
-                <li>Biblioteca tsparticles para efeitos visuais</li>
-                <li>Integração com FormSubmit para e-mails</li>
-                <li>Font Awesome para ícones</li>
-              </ul>
-            </li>
-            <li><strong>Otimizações</strong>:
-              <ul class="nested-features">
-                <li>Performance: 95+ no Lighthouse</li>
-                <li>Responsividade: Mobile-first design</li>
-                <li>SEO: Meta tags e estrutura semântica</li>
-                <li>Acessibilidade: Contrastes e landmarks</li>
-                <li>Carregamento: Lazy loading para imagens</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/kkrodrigues021/portfolio" target="_blank" class="btn btn-github">
-              <i class="fab fa-github"></i> Código Fonte
-            </a>
-          </div>
-        </div>
+
+    <section id="certificacoes" class="section section-pad border-bottom">
+      <h2 class="section-title">06 // DATA MATRIX: CERTIFICAÇÕES</h2>
+      
+      <div class="cert-grid">
+        <div class="cert-item"><div class="cert-meta">CERTIPROF</div><div class="cert-title">Cybersecurity Awareness - CAPC</div></div>
+        <div class="cert-item"><div class="cert-meta">CERTIPROF</div><div class="cert-title">Scrum Foundation (SFPC™)</div></div>
+        <div class="cert-item"><div class="cert-meta">CERTIPROF</div><div class="cert-title">Lifelong Learning</div></div>
         
-        <div class="project">
-          <h3>Fúria FanBot - Assistente para Comunidade Esports</h3>
-          <div class="tech-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Telegram API</span>
-            <span class="tag">python-telegram-bot</span>
-            <span class="tag">Web Scraping</span>
-            <span class="tag">Chatbot</span>
-          </div>
-          <p>Bot não-oficial para o desafio de programação da FURIA Esports com moderação automatizada, informações da equipe e interação inteligente.</p>
-          <ul class="project-features">
-            <li><strong>Sistema de Interação</strong>:
-              <ul class="nested-features">
-                <li>Teclado dinâmico com ReplyKeyboardMarkup</li>
-                <li>Comandos secretos ativados por palavras-chave ("vamo furia", "art", "fallen")</li>
-                <li>Respostas contextualizadas</li>
-              </ul>
-              <li><strong>Funcionalidades Principais</strong>:
-                <ul class="nested-features">
-                  <li>Consulta do elenco atual e próximos jogos</li>
-                  <li>Curiosidades sobre a organização</li>
-                  <li>Sistema de mensagens de apoio</li>
-                  <li>Integração com redes sociais</li>
-                </ul>
-              </li>
-              <li><strong>Tecnologias Implementadas</strong>:
-                <ul class="nested-features">
-                  <li>Biblioteca python-telegram-bot (v20+)</li>
-                  <li>Web Scraping para atualização automática de dados</li>
-                  <li>Handlers para comandos e mensagens</li>
-                  <li>Sistema de polling para atualizações em tempo real</li>
-                </ul>
-              </li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/kkrodrigues021/chat-bot-furia" target="_blank" class="btn btn-github">
-              <i class="fab fa-github"></i> Código Fonte
-            </a>
-            <a href="https://t.me/furiafanofc_bot" target="_blank" class="btn btn-live">
-              <i class="fab fa-telegram"></i> Demo Online
-            </a>
-          </div>
-        </div>
-  
-        <div class="project">
-          <h3>TaskMaster Pro - Gerenciador Inteligente de Tarefas</h3>
-          <div class="tech-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">LocalStorage API</span>
-            <span class="tag">DOM Manipulation</span>
-            <span class="tag">Priority System</span>
-            <span class="tag">Dark Mode</span>
-          </div>
-          <p>Aplicativo web para gerenciamento pessoal de tarefas com sistema de priorização visual e armazenamento local persistente.</p>
-          <ul class="project-features">
-            <li><strong>Sistema de Interação</strong>:
-              <ul class="nested-features">
-                <li>Input dinâmico com validação em tempo real</li>
-                <li>Teclado virtual otimizado para mobile</li>
-                <li>Feedback visual imediato para ações do usuário</li>
-              </ul>
-            </li>
-            <li><strong>Funcionalidades Principais</strong>:
-              <ul class="nested-features">
-                <li>Sistema de prioridades visuais:
-                  <ul>
-                    <li>⬇️ Baixa (indicador azul claro)</li>
-                    <li>🔵 Média (indicador azul)</li>
-                    <li>❗ Alta (indicador vermelho)</li>
-                  </ul>
-                </li>
-                <li>Filtros inteligentes:
-                  <ul>
-                    <li>Todas as tarefas</li>
-                    <li>Somente ativas</li>
-                    <li>Apenas concluídas</li>
-                  </ul>
-                </li>
-                <li>Animação de conclusão com efeito de texto riscado</li>
-                <li>Contador automático de tarefas (totais/concluídas)</li>
-              </ul>
-            </li>
-            <li><strong>Tecnologias Implementadas</strong>:
-              <ul class="nested-features">
-                <li>Vanilla JavaScript ES6+ (sem dependências externas)</li>
-                <li>Armazenamento local com LocalStorage API</li>
-                <li>CSS Flexbox/Grid para layout responsivo</li>
-                <li>Transições CSS para animações fluidas</li>
-                <li>Event Delegation para melhor performance</li>
-                <li>Design System com variáveis CSS</li>
-              </ul>
-            </li>
-            <li><strong>Features Exclusivas</strong>:
-              <ul class="nested-features">
-                <li>Toggle de tema claro/escuro com persistência</li>
-                <li>Sistema de arrastar e soltar (drag-and-drop)</li>
-                <li>Edição in-place de tarefas existentes</li>
-                <li>Responsividade para todos os dispositivos</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/kkrodrigues021/taskmaster-pro" target="_blank" class="btn btn-github">
-              <i class="fab fa-github"></i> Código Fonte
-            </a>
-            <a href="https://kkrodrigues021.github.io/taskmaster-pro/" target="_blank" class="btn btn-live">
-              <i class="fas fa-external-link-alt"></i> Demo Online
-            </a>
-          </div>
-        </div>
-  
-        <div class="project">
-          <h3>FinControl - Sistema de Gestão Financeira Pessoal</h3>
-          <div class="tech-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">Chart.js</span>
-            <span class="tag">LocalStorage</span>
-            <span class="tag">Responsive Design</span>
-            <span class="tag">Dark Mode</span>
-          </div>
-          <p>Aplicativo completo para controle financeiro pessoal com registro de transações, gestão de cartão de crédito e visualização gráfica de gastos.</p>
-          <ul class="project-features">
-            <li><strong>Sistema de Transações</strong>:
-              <ul class="nested-features">
-                <li>Formulário inteligente com validação em tempo real</li>
-                <li>Registro de entradas e saídas com categorização</li>
-                <li>Sistema de criação dinâmica de categorias personalizadas</li>
-                <li>Histórico completo com filtro automático</li>
-              </ul>
-            </li>
-            <li><strong>Módulo Bancário</strong>:
-              <ul class="nested-features">
-                <li>Controle de saldo em tempo real:
-                  <ul>
-                    <li>Atualização automática ao registrar transações</li>
-                    <li>Destaque visual para saldo negativo</li>
-                  </ul>
-                </li>
-                <li>Gestão de cartão de crédito:
-                  <ul>
-                    <li>Registro de compras parceladas</li>
-                    <li>Pagamento de faturas com verificação de saldo</li>
-                    <li>Visualização de faturas pendentes</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><strong>Tecnologias Implementadas</strong>:
-              <ul class="nested-features">
-                <li>Chart.js para visualização gráfica dos gastos</li>
-                <li>LocalStorage para persistência de dados</li>
-                <li>CSS Grid para layout avançado</li>
-                <li>Sistema de temas com variáveis CSS</li>
-                <li>Animações CSS para notificações</li>
-                <li>Manipulação DOM complexa</li>
-              </ul>
-            </li>
-            <li><strong>Features Exclusivas</strong>:
-              <ul class="nested-features">
-                <li>Sistema de notificações toast animadas</li>
-                <li>Gráfico dinâmico de categorias de gastos</li>
-                <li>Resumo financeiro automático</li>
-                <li>Modo claro/escuro com persistência</li>
-                <li>Design responsivo para todos os dispositivos</li>
-                <li>Validação contextual (ex: salário só como entrada)</li>
-              </ul>
-            </li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/kkrodrigues021/fincontrol" target="_blank" class="btn btn-github">
-              <i class="fab fa-github"></i> Código Fonte
-            </a>
-            <a href="https://kkrodrigues021.github.io/fincontrol/" target="_blank" class="btn btn-live">
-              <i class="fas fa-external-link-alt"></i> Demo Online
-            </a>
-          </div>
-        </div>
+        <div class="cert-item"><div class="cert-meta">CISCO</div><div class="cert-title">Introduction to Cybersecurity</div></div>
+        <div class="cert-item"><div class="cert-meta">MICROSOFT</div><div class="cert-title">Conectores e APIs Power Platform</div></div>
+        
+        <div class="cert-item"><div class="cert-meta">TIVIT</div><div class="cert-title">Desenvolvimento Seguro</div></div>
+        <div class="cert-item"><div class="cert-meta">TIVIT</div><div class="cert-title">DTG: Gerenciamento de Requisitos</div></div>
+        <div class="cert-item"><div class="cert-meta">TIVIT</div><div class="cert-title">Golpes de Phishing</div></div>
+        
+        <div class="cert-item"><div class="cert-meta">FUNDAÇÃO BRADESCO</div><div class="cert-title">Desenvolvimento Web (HTML, CSS, JS)</div></div>
+        
+        <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Inteligência Emocional</div></div>
+        <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Painel de Controle de Indicadores</div></div>
+        <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Mapa de Métricas e Desempenho</div></div>
+        <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Árvore de Decisão de Indicadores</div></div>
+
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Lidando com Data, Hora e Fuso Horário no Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Aprendendo a Utilizar Dicionários em Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Explorando Conjuntos em Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Conhecendo Tuplas em Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Trabalhando com Listas em Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Sintaxe Básica com Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Dominando Funções Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Manipulando Strings com Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Estruturas Condicionais e de Repetição</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Tipos de Operadores com Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Introdução ao Ambiente e Projetos Colaborativos</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Contribuindo em um Projeto Open Source</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Versionamento de Código com Git e GitHub</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Conhecendo a Linguagem Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Ambiente de Desenvolvimento Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Crie Um Portfólio Vencedor</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Princípios de Desenvolvimento Python</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Desafios de Código: Lógica e Pensamento</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Operadores e Manipulação de String</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Santander Bootcamp 2025</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Experiência Santander 2025</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Suzano - Python Developer</div></div>
+        <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Introdução ao Python com a Suzano</div></div>
       </div>
     </section>
-  
-    <section id="contato" class="section">
-      <div class="container">
-        <h2>Contato</h2>
-        <div class="contato-container">
-          <div class="contato-info">
-            <h3>Vamos conversar!</h3>
-            <p>Estou aberto a oportunidades e colaborações. Entre em contato:</p>
-            <ul class="contato-links">
-              <li><a href="mailto:kaiky.rodrigues039@gmail.com"><i class="fas fa-envelope"></i> kaiky.rodrigues039@gmail.com</a></li>
-              <li><a href="tel:+5521991363880"><i class="fas fa-phone"></i> (21) 99136-3880</a></li>
-              <li><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, Brasil</li>
-            </ul>
+
+    <section id="contato" class="footer-brutal section">
+      <h2 class="massive-footer">INICIE<br>PROJETO</h2>
+      
+      <div class="contact-grid">
+        <form action="enviar.php" method="POST" class="brutal-form">
+          <div class="form-group">
+            <input type="text" name="nome" placeholder="NOME OU EMPRESA" required>
           </div>
-          <form class="contato-form" action="https://formsubmit.co/kaiky.rodrigues039@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="📌 Nova mensagem do seu portfólio!">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://kkrodrigues021.github.io/portfolio/obrigado.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none">
-            
-            <div class="form-group">
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Seu email" required>
-            </div>
-            <div class="form-group">
-              <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-enviar">
-              <i class="fas fa-paper-plane"></i> Enviar Mensagem
-            </button>
-          </form>
-        </div>
-        <div class="redes-sociais">
-          <a href="https://github.com/kkrodrigues021" target="_blank" class="btn-social"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="btn-social"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/kkrodrigues021" target="_blank" class="btn-social"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/kkrodrigues021" target="_blank" class="btn-social"><i class="fab fa-twitter"></i></a>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="E-MAIL CORPORATIVO" required>
+          </div>
+          <div class="form-group">
+            <textarea name="mensagem" rows="4" placeholder="DESCREVA O SEU DESAFIO TECNOLÓGICO..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn magnetic-btn">ENVIAR DIAGNÓSTICO ↗</button>
+        </form>
+
+        <div class="footer-info">
+          <div class="f-col">
+            <span class="label">CONTATO DIRETO</span>
+            <a href="mailto:kaiky.rodrigues039@gmail.com" class="hover-line">kaiky.rodrigues039@gmail.com</a>
+            <a href="tel:+5521991363880" class="hover-line">+55 21 99136 3880</a>
+          </div>
+          <div class="f-col">
+            <span class="label">NETWORKS GLOBAIS</span>
+            <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="hover-line">LinkedIn Executivo</a>
+            <a href="https://github.com/kkrodrigues021" target="_blank" class="hover-line">GitHub Systems</a>
+          </div>
+          <div class="f-col">
+            <span class="label">STATUS B2B</span>
+            <p style="color: var(--muted); font-weight: 500;">
+              <span class="status-dot"></span> Operational in RJ, BR<br>
+              © 2026 Kaiky Rodrigues
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer role="contentinfo">
-    <div class="container">
-      <p>© <span id="ano-atual">2025</span> Kaiky Rodrigues. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Seletor de idioma -->
-  <div class="language-switcher">
-    <a href="index-en.html" class="btn-language" aria-label="English version">
-      <i class="fas fa-language"></i> English
-    </a>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </body>
 </html>
