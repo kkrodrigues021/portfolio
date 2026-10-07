@@ -4,39 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaiky Rodrigues | CEO & Engenharia de TI</title>
-  <meta name="description" content="Engenharia de Software, Infraestrutura Corporativa B2B e Liderança Técnica.">
-  
+  <meta name="description" content="Engenharia de Software, Infraestrutura Corporativa B2B e Liderança Técnica. CEO da ZYNIT.">
+  <meta name="theme-color" content="#050505">
+
   <link rel="icon" href="imagens/icon.png" type="image/png">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+
   <link rel="stylesheet" href="./styles.css">
+  <noscript><style>.section{opacity:1!important;transform:none!important}</style></noscript>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
   <div id="scroll-progress"></div>
 
   <nav class="top-bar">
-    <div class="brand">
+    <a href="#top" class="brand">
       K.R
       <span class="badge">CEO/ENG</span>
       <span class="status-indicator" title="System Online - Accepting B2B Projects">
         <span class="status-dot"></span> ONLINE
       </span>
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#expertise">Expertise</a>
       <a href="#carreira">Carreira</a>
       <a href="#formacao">Formação</a>
       <a href="#sistemas">Sistemas</a>
       <a href="#certificacoes">Certificações</a>
+      <a href="#contato" class="nav-cta">Contato ↘</a>
     </div>
   </nav>
 
-  <header class="hero section">
+  <header id="top" class="hero section">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-eyebrow">
+      <span class="label">DOSSIÊ EXECUTIVO // 2026</span>
+      <span class="label">REF. KR-001 // RJ-BR</span>
+    </div>
+
     <div class="hero-title-wrapper">
       <div class="dossier-photo">
         <img src="imagens/foto.jpg" alt="Foto de Kaiky Rodrigues" class="profile-img">
@@ -46,7 +57,9 @@
         RODRIGUES
       </h1>
     </div>
-    
+
+    <p class="hero-lead">Infraestrutura crítica, engenharia de software e contratos B2B sob uma única operação.</p>
+
     <div class="hero-dossier">
       <div class="dossier-col">
         <span class="label">CURRENT POSITION</span>
@@ -61,23 +74,23 @@
       <div class="dossier-col">
         <span class="label">BASE & ASSETS</span>
         <p>Rio de Janeiro, BR</p>
-        <a href="curriculo.pdf" download class="btn-outline-hero" style="margin-top: 5px; display: inline-block;">BAIXAR CURRÍCULO ↘</a>
+        <a href="curriculo.pdf" download class="btn-outline-hero magnetic-btn">BAIXAR CURRÍCULO ↘</a>
       </div>
     </div>
   </header>
 
-  <div class="ticker-wrap">
+  <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker">
       <span class="ticker-item">SCRUM</span><span class="ticker-item">•</span>
       <span class="ticker-item">PYTHON / LUA</span><span class="ticker-item">•</span>
       <span class="ticker-item">ACTIVE DIRECTORY</span><span class="ticker-item">•</span>
-      <span class="ticker-item">JAVASCRIPT / PHP</span><span class="ticker-item">•</span>
+      <span class="ticker-item">JAVASCRIPT / TYPESCRIPT</span><span class="ticker-item">•</span>
       <span class="ticker-item">SCCM / LAPS UI</span><span class="ticker-item">•</span>
       <span class="ticker-item">CYBERSECURITY</span><span class="ticker-item">•</span>
       <span class="ticker-item">SCRUM</span><span class="ticker-item">•</span>
       <span class="ticker-item">PYTHON / LUA</span><span class="ticker-item">•</span>
       <span class="ticker-item">ACTIVE DIRECTORY</span><span class="ticker-item">•</span>
-      <span class="ticker-item">JAVASCRIPT / PHP</span><span class="ticker-item">•</span>
+      <span class="ticker-item">JAVASCRIPT / TYPESCRIPT</span><span class="ticker-item">•</span>
       <span class="ticker-item">SCCM / LAPS UI</span><span class="ticker-item">•</span>
       <span class="ticker-item">CYBERSECURITY</span><span class="ticker-item">•</span>
     </div>
@@ -85,25 +98,28 @@
 
   <main>
     <section id="expertise" class="section section-pad border-bottom">
-      <h2 class="section-title">01 // DOMÍNIO TÉCNICO</h2>
-      
+      <h2 class="section-title"><span class="idx">01</span> DOMÍNIO TÉCNICO</h2>
+
       <div class="bento-grid">
-        <div class="bento-card col-span-2">
+        <div class="bento-card col-span-2 spot">
           <div class="card-header">
+            <span class="card-index">// 01</span>
             <h3>Infraestrutura Crítica & Suporte</h3>
           </div>
           <p>Gestão profunda de identidades corporativas (Active Directory, SCCM, LAPS UI). Suporte multinível focado em mitigar downtime e blindar operações empresariais de ponta a ponta.</p>
         </div>
 
-        <div class="bento-card bg-invert">
+        <div class="bento-card bg-invert spot">
           <div class="card-header">
+            <span class="card-index">// 02</span>
             <h3>Dev & Sistemas</h3>
           </div>
           <p>Engenharia de aplicações e arquitetura de dados corporativos. Desenvolvimento full-cycle de APIs, PWAs e sistemas de controle.</p>
         </div>
 
-        <div class="bento-card">
+        <div class="bento-card spot">
           <div class="card-header">
+            <span class="card-index">// 03</span>
             <h3>Visão B2B</h3>
           </div>
           <p>Liderança tecnológica, gerenciamento ágil e infraestrutura digital desenhada especificamente para escalar operações de negócios.</p>
@@ -112,24 +128,42 @@
     </section>
 
     <section id="stack" class="section section-pad border-bottom">
-      <h2 class="section-title">02 // STACK TECNOLÓGICA</h2>
-      
+      <h2 class="section-title"><span class="idx">02</span> STACK TECNOLÓGICA</h2>
+
       <div class="tech-grid">
-        <div class="tech-box"><img src="imagens/python.png" alt="Python"><span>PYTHON</span></div>
-        <div class="tech-box"><img src="imagens/javascript.png" alt="JavaScript"><span>JAVASCRIPT</span></div>
-        <div class="tech-box"><img src="imagens/php.png" alt="PHP"><span>PHP</span></div>
-        <div class="tech-box"><img src="imagens/mysql.png" alt="MySQL"><span>MYSQL</span></div>
-        <div class="tech-box"><img src="imagens/lua.png" alt="Lua"><span>LUA</span></div>
-        <div class="tech-box"><img src="imagens/html.png" alt="HTML5"><span>HTML5</span></div>
-        <div class="tech-box"><img src="imagens/css.png" alt="CSS3"><span>CSS3</span></div>
-        <div class="tech-box"><img src="imagens/git.png" alt="Git"><span>GIT</span></div>
-        <div class="tech-box"><img src="imagens/github.png" alt="GitHub"><span>GITHUB</span></div>
+        <div class="tech-box spot" style="--brand:#4B8BBE"><i class="devicon-python-plain" aria-hidden="true"></i><span>PYTHON 3</span></div>
+        <div class="tech-box spot" style="--brand:#8892BF"><i class="devicon-php-plain" aria-hidden="true"></i><span>PHP</span></div>
+        <div class="tech-box spot" style="--brand:#4479A1"><i class="devicon-mysql-plain" aria-hidden="true"></i><span>MYSQL</span></div>
+        <div class="tech-box spot" style="--brand:#E34F26"><i class="devicon-html5-plain" aria-hidden="true"></i><span>HTML5</span></div>
+        <div class="tech-box spot" style="--brand:#1572B6"><i class="devicon-css3-plain" aria-hidden="true"></i><span>CSS3</span></div>
+        <div class="tech-box spot" style="--brand:#F7DF1E"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>JAVASCRIPT</span></div>
+        <div class="tech-box spot" style="--brand:#5B6CFF"><i class="devicon-lua-plain" aria-hidden="true"></i><span>LUA</span></div>
+        <div class="tech-box spot" style="--brand:#F05032"><i class="devicon-git-plain" aria-hidden="true"></i><span>GIT</span></div>
+        <div class="tech-box spot" style="--brand:#FFFFFF"><i class="devicon-github-original" aria-hidden="true"></i><span>GITHUB</span></div>
+        <div class="tech-box spot" style="--brand:#3178C6"><i class="devicon-typescript-plain" aria-hidden="true"></i><span>TYPESCRIPT</span></div>
+        <div class="tech-box spot" style="--brand:#61DAFB">
+          <svg class="tech-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+            <circle cx="12" cy="12" r="1.9" fill="currentColor" stroke="none"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>
+          </svg>
+          <span>TSX</span>
+        </div>
+        <div class="tech-box spot" style="--brand:#CBCB41">
+          <svg class="tech-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1"/>
+            <path d="M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/>
+            <circle cx="9" cy="12" r=".8" fill="currentColor"/><circle cx="12" cy="12" r=".8" fill="currentColor"/><circle cx="15" cy="12" r=".8" fill="currentColor"/>
+          </svg>
+          <span>JSON</span>
+        </div>
       </div>
     </section>
 
     <section id="carreira" class="section section-pad border-bottom">
-      <h2 class="section-title">03 // HISTÓRICO CORPORATIVO</h2>
-      
+      <h2 class="section-title"><span class="idx">03</span> HISTÓRICO CORPORATIVO</h2>
+
       <div class="exp-timeline">
         <div class="exp-item active-item">
           <div class="exp-meta">
@@ -151,7 +185,7 @@
 
         <div class="exp-item">
           <div class="exp-meta">
-            <span class="exp-status" style="color: var(--muted);"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
+            <span class="exp-status muted-text"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
           </div>
           <div class="exp-content">
             <h3 class="exp-role">Analista de Suporte <span>@ Atos</span></h3>
@@ -167,7 +201,7 @@
 
         <div class="exp-item">
           <div class="exp-meta">
-            <span class="exp-status" style="color: var(--muted);"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
+            <span class="exp-status muted-text"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
           </div>
           <div class="exp-content">
             <h3 class="exp-role">Técnico em Informática <span>@ GRUPO MV3</span></h3>
@@ -184,8 +218,8 @@
     </section>
 
     <section id="formacao" class="section section-pad border-bottom">
-      <h2 class="section-title">04 // BASE ACADÊMICA</h2>
-      
+      <h2 class="section-title"><span class="idx">04</span> BASE ACADÊMICA</h2>
+
       <div class="exp-timeline">
         <div class="exp-item active-item">
           <div class="exp-meta">
@@ -207,7 +241,7 @@
 
         <div class="exp-item">
           <div class="exp-meta">
-            <span class="exp-status" style="color: var(--muted);"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
+            <span class="exp-status muted-text"><span class="status-dot muted"></span> STATUS // CONCLUÍDO</span>
           </div>
           <div class="exp-content">
             <h3 class="exp-role">Tecnologia da Informação <span>@ Colégio Flama</span></h3>
@@ -224,30 +258,73 @@
     </section>
 
     <section id="sistemas" class="section section-pad border-bottom">
-      <h2 class="section-title">05 // INDEX DE SISTEMAS</h2>
-      
-      <div class="table-cases">
-        <a href="https://zynit.netlify.app" target="_blank" class="case-row active-item">
-          <div class="row-meta"><span class="status-dot"></span> OPERAÇÃO B2B // STARTUP</div>
-          <div class="row-title">ZYNIT</div>
-          <div class="row-desc">
-            <div class="mb-1">Liderança executiva como CEO. Desenvolvimento estrutural de ecossistemas corporativos, sistemas de gestão financeira e orquestração de TI para o mercado B2B.</div>
-            <span class="inline-tag">Business</span> <span class="inline-tag">PWA</span> <span class="inline-tag">Infraestrutura</span>
-          </div>
-          <div class="row-arrow">↗</div>
-        </a>
+      <h2 class="section-title"><span class="idx">05</span> INDEX DE SISTEMAS</h2>
 
-        <a href="https://github.com/kkrodrigues021/portfolio" target="_blank" class="case-row">
+      <!-- HOLOFOTE: ECOSSISTEMA ZYNIT -->
+      <div class="spotlight-zynit">
+        <div class="zynit-head">
+          <div>
+            <span class="zynit-kicker">SISTEMAS PROPRIETÁRIOS</span>
+            <h3 class="zynit-title">O ECOSSISTEMA <span class="outline">ZYNIT</span></h3>
+          </div>
+          <p class="zynit-sub">Plataformas operadas e mantidas pela ZYNIT Soluções em TI. Produto próprio, infraestrutura própria, responsabilidade integral.</p>
+        </div>
+
+        <div class="zynit-grid">
+          <a href="https://zynit.netlify.app" target="_blank" rel="noopener" class="zynit-card spot zynit-main">
+            <div class="zynit-top">
+              <span class="corp-tag">SITE CORPORATIVO</span>
+              <span class="status-pill live"><span class="status-dot"></span> NO AR</span>
+            </div>
+            <div class="zynit-name">ZYNIT <span>Soluções em TI</span></div>
+            <p class="zynit-desc">Presença institucional da operação B2B. Posicionamento, catálogo de serviços e canal de entrada para contratos de infraestrutura e desenvolvimento.</p>
+            <div class="zynit-foot">
+              <span class="inline-tag">Business</span><span class="inline-tag">Infraestrutura</span><span class="inline-tag">B2B</span>
+              <span class="zynit-arrow">↗</span>
+            </div>
+          </a>
+
+          <a href="https://zenbookbr.web.app" target="_blank" rel="noopener" class="zynit-card spot">
+            <div class="zynit-top">
+              <span class="corp-tag">SISTEMA SAAS</span>
+              <span class="status-pill live"><span class="status-dot"></span> OPERACIONAL / NO AR</span>
+            </div>
+            <div class="zynit-name">Zenbook <span>by ZYNIT</span></div>
+            <p class="zynit-desc">Sistema SaaS de agendamentos online para negócios de hora marcada. Agenda sem conflitos, página de agendamento própria, aviso ao cliente por WhatsApp e painel de métricas.</p>
+            <div class="zynit-foot">
+              <span class="inline-tag">SaaS</span><span class="inline-tag">Agendamentos</span><span class="inline-tag">WhatsApp</span>
+              <span class="zynit-arrow">↗</span>
+            </div>
+          </a>
+
+          <div class="zynit-card spot is-dev">
+            <div class="zynit-top">
+              <span class="corp-tag">PLATAFORMA INTERNA</span>
+              <span class="status-pill dev"><span class="status-dot warn"></span> EM DESENVOLVIMENTO / EM BREVE</span>
+            </div>
+            <div class="zynit-name">ZYNIT <span>ServiceOps</span></div>
+            <p class="zynit-desc">Plataforma interna de operações de serviço. Em desenvolvimento, lançamento em breve.</p>
+            <div class="zynit-foot">
+              <span class="inline-tag">Service Desk</span><span class="inline-tag">Em breve</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-label"><span class="label">REPOSITÓRIOS // GITHUB</span></div>
+
+      <div class="table-cases">
+        <a href="https://github.com/kkrodrigues021/portfolio" target="_blank" rel="noopener" class="case-row">
           <div class="row-meta">REPOSITÓRIO // UI ARCHITECTURE</div>
           <div class="row-title">Corporate Portfolio V2</div>
           <div class="row-desc">
-            <div class="mb-1">Plataforma web de alto padrão. Tech Brutalism, sistema de temas, microinterações magnéticas e otimização SEO extrema (Lighthouse 95+).</div>
-            <span class="inline-tag">HTML5/CSS3</span> <span class="inline-tag">JavaScript</span> <span class="inline-tag">Particles.js</span>
+            <div class="mb-1">Plataforma web de alto padrão. Tech Brutalism, microinterações magnéticas e otimização SEO extrema (Lighthouse 95+).</div>
+            <span class="inline-tag">HTML5/CSS3</span> <span class="inline-tag">JavaScript</span> <span class="inline-tag">PHP</span>
           </div>
           <div class="row-arrow">↗</div>
         </a>
 
-        <a href="https://github.com/kkrodrigues021/fincontrol" target="_blank" class="case-row">
+        <a href="https://github.com/kkrodrigues021/fincontrol" target="_blank" rel="noopener" class="case-row">
           <div class="row-meta">PROJETO // JAVASCRIPT</div>
           <div class="row-title">FinControl System</div>
           <div class="row-desc">
@@ -257,7 +334,7 @@
           <div class="row-arrow">↗</div>
         </a>
 
-        <a href="https://github.com/kkrodrigues021/taskmaster-pro" target="_blank" class="case-row">
+        <a href="https://github.com/kkrodrigues021/taskmaster-pro" target="_blank" rel="noopener" class="case-row">
           <div class="row-meta">PROJETO // JS & DOM</div>
           <div class="row-title">TaskMaster Pro</div>
           <div class="row-desc">
@@ -267,7 +344,7 @@
           <div class="row-arrow">↗</div>
         </a>
 
-        <a href="https://github.com/kkrodrigues021/chat-bot-furia" target="_blank" class="case-row">
+        <a href="https://github.com/kkrodrigues021/chat-bot-furia" target="_blank" rel="noopener" class="case-row">
           <div class="row-meta">PROJETO // PYTHON API</div>
           <div class="row-title">Fúria FanBot</div>
           <div class="row-desc">
@@ -277,7 +354,7 @@
           <div class="row-arrow">↗</div>
         </a>
 
-        <a href="https://github.com/kkrodrigues021/sistema-bancario-dio" target="_blank" class="case-row">
+        <a href="https://github.com/kkrodrigues021/sistema-bancario-dio" target="_blank" rel="noopener" class="case-row">
           <div class="row-meta">PROJETO // PYTHON BACKEND</div>
           <div class="row-title">Sistema Bancário Core</div>
           <div class="row-desc">
@@ -290,27 +367,22 @@
     </section>
 
     <section id="certificacoes" class="section section-pad border-bottom">
-      <h2 class="section-title">06 // DATA MATRIX: CERTIFICAÇÕES</h2>
-      
+      <h2 class="section-title"><span class="idx">06</span> DATA MATRIX: CERTIFICAÇÕES</h2>
+
       <div class="cert-grid">
         <div class="cert-item"><div class="cert-meta">CERTIPROF</div><div class="cert-title">Cybersecurity Awareness - CAPC</div></div>
         <div class="cert-item"><div class="cert-meta">CERTIPROF</div><div class="cert-title">Scrum Foundation (SFPC™)</div></div>
         <div class="cert-item"><div class="cert-meta">CERTIPROF</div><div class="cert-title">Lifelong Learning</div></div>
-        
         <div class="cert-item"><div class="cert-meta">CISCO</div><div class="cert-title">Introduction to Cybersecurity</div></div>
         <div class="cert-item"><div class="cert-meta">MICROSOFT</div><div class="cert-title">Conectores e APIs Power Platform</div></div>
-        
         <div class="cert-item"><div class="cert-meta">TIVIT</div><div class="cert-title">Desenvolvimento Seguro</div></div>
         <div class="cert-item"><div class="cert-meta">TIVIT</div><div class="cert-title">DTG: Gerenciamento de Requisitos</div></div>
         <div class="cert-item"><div class="cert-meta">TIVIT</div><div class="cert-title">Golpes de Phishing</div></div>
-        
         <div class="cert-item"><div class="cert-meta">FUNDAÇÃO BRADESCO</div><div class="cert-title">Desenvolvimento Web (HTML, CSS, JS)</div></div>
-        
         <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Inteligência Emocional</div></div>
         <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Painel de Controle de Indicadores</div></div>
         <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Mapa de Métricas e Desempenho</div></div>
         <div class="cert-item"><div class="cert-meta">CELSO LISBOA</div><div class="cert-title">Árvore de Decisão de Indicadores</div></div>
-
         <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Lidando com Data, Hora e Fuso Horário no Python</div></div>
         <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Aprendendo a Utilizar Dicionários em Python</div></div>
         <div class="cert-item"><div class="cert-meta">DIO</div><div class="cert-title">Explorando Conjuntos em Python</div></div>
@@ -339,17 +411,20 @@
 
     <section id="contato" class="footer-brutal section">
       <h2 class="massive-footer">INICIE<br>PROJETO</h2>
-      
+
       <div class="contact-grid">
         <form action="enviar.php" method="POST" class="brutal-form">
           <div class="form-group">
-            <input type="text" name="nome" placeholder="NOME OU EMPRESA" required>
+            <label class="label" for="nome">01 // IDENTIFICAÇÃO</label>
+            <input id="nome" type="text" name="nome" placeholder="NOME OU EMPRESA" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="E-MAIL CORPORATIVO" required>
+            <label class="label" for="email">02 // CANAL</label>
+            <input id="email" type="email" name="email" placeholder="E-MAIL CORPORATIVO" required>
           </div>
           <div class="form-group">
-            <textarea name="mensagem" rows="4" placeholder="DESCREVA O SEU DESAFIO TECNOLÓGICO..." required></textarea>
+            <label class="label" for="mensagem">03 // ESCOPO</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="DESCREVA O SEU DESAFIO TECNOLÓGICO..." required></textarea>
           </div>
           <button type="submit" class="submit-btn magnetic-btn">ENVIAR DIAGNÓSTICO ↗</button>
         </form>
@@ -362,12 +437,12 @@
           </div>
           <div class="f-col">
             <span class="label">NETWORKS GLOBAIS</span>
-            <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" class="hover-line">LinkedIn Executivo</a>
-            <a href="https://github.com/kkrodrigues021" target="_blank" class="hover-line">GitHub Systems</a>
+            <a href="https://www.linkedin.com/in/kaikyrodrigues39" target="_blank" rel="noopener" class="hover-line">LinkedIn Executivo</a>
+            <a href="https://github.com/kkrodrigues021" target="_blank" rel="noopener" class="hover-line">GitHub Systems</a>
           </div>
           <div class="f-col">
             <span class="label">STATUS B2B</span>
-            <p style="color: var(--muted); font-weight: 500;">
+            <p class="muted-text">
               <span class="status-dot"></span> Operational in RJ, BR<br>
               © 2026 Kaiky Rodrigues
             </p>
